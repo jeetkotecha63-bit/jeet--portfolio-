@@ -3,765 +3,634 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101714">
-  <meta name="description" content="Official portfolio of Kotecha Jeet Pareshbhai, Food and Agro Processing student at Lokbharati University for Rural Innovation.">
-  <title>Kotecha Jeet Pareshbhai | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101714">
+<title>Kotecha Jeet Pareshbhai | Portfolio</title>
 
-  <style>
-    :root {
-      --bg: #0c1210;
-      --surface: #141d19;
-      --surface2: #1b2721;
-      --text: #f2f7f3;
-      --muted: #aab9b0;
-      --accent: #83edb2;
-      --border: rgba(131, 237, 178, 0.18);
-    }
+<style>
+:root {
+  --bg: #0c1210;
+  --card: #141d19;
+  --text: #f2f7f3;
+  --muted: #aab9b0;
+  --accent: #83edb2;
+  --border: rgba(131,237,178,.2);
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    img {
-      display: block;
-      width: 100%;
-      object-fit: cover;
-    }
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
 
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #0c1210;
+  border-bottom: 1px solid var(--border);
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(12, 18, 16, 0.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-    }
+.navbar {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
 
-    .navbar {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+.logo {
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: bold;
+  white-space: nowrap;
+}
 
-    .logo {
-      color: var(--accent);
-      font-size: 1.45rem;
-      font-weight: 800;
-      white-space: nowrap;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
+nav a {
+  color: var(--muted);
+  font-size: .85rem;
+}
 
-    nav a {
-      font-size: 0.86rem;
-      color: var(--muted);
-      transition: color 0.2s;
-    }
+nav a:hover {
+  color: var(--accent);
+}
 
-    nav a:hover {
-      color: var(--accent);
-    }
+section {
+  padding: 70px 0;
+  scroll-margin-top: 85px;
+}
 
-    section {
-      padding: 75px 0;
-      scroll-margin-top: 80px;
-    }
+.hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(ellipse at top right, #1c392a, transparent 50%);
+}
 
-    .hero {
-      min-height: 540px;
-      display: flex;
-      align-items: center;
-      background:
-        radial-gradient(ellipse at 90% 10%, rgba(131,237,178,.12), transparent 38%),
-        var(--bg);
-    }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  align-items: center;
+  gap: 40px;
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      align-items: center;
-      gap: 48px;
-    }
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .82rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
 
-    .eyebrow {
-      color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 14px;
-    }
+h1 {
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 1.15;
+  margin-bottom: 18px;
+  overflow-wrap: anywhere;
+}
 
-    h1 {
-      font-size: clamp(2.3rem, 6vw, 4.4rem);
-      line-height: 1.13;
-      margin-bottom: 20px;
-      overflow-wrap: anywhere;
-    }
+h1 span, h2 span {
+  color: var(--accent);
+}
 
-    h1 span, .highlight {
-      color: var(--accent);
-    }
+p {
+  color: var(--muted);
+}
 
-    .hero p, .section-intro {
-      color: var(--muted);
-      max-width: 650px;
-    }
+.hero-photo {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card);
+}
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
+.hero-photo img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 13px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 11px 19px;
-      border-radius: 9px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      border: 1px solid var(--accent);
-    }
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
 
-    .btn-primary {
-      background: var(--accent);
-      color: #102017;
-    }
+.btn {
+  display: inline-block;
+  padding: 10px 17px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: bold;
+}
 
-    .btn-outline {
-      color: var(--accent);
-    }
+.btn.primary {
+  background: var(--accent);
+  color: #102017;
+}
 
-    .hero-photo {
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      background: var(--surface);
-      box-shadow: 0 20px 60px rgba(0,0,0,.25);
-    }
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 12px;
+}
 
-    .hero-photo img {
-      height: 330px;
-      border-radius: 16px;
-    }
+.line {
+  height: 4px;
+  width: 55px;
+  background: var(--accent);
+  border-radius: 5px;
+  margin: 14px 0 25px;
+}
 
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      margin-bottom: 10px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
 
-    .section-intro {
-      margin-bottom: 30px;
-    }
+.two-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
 
-    .accent-line {
-      width: 55px;
-      height: 4px;
-      background: var(--accent);
-      border-radius: 10px;
-      margin: 13px 0 20px;
-    }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 22px;
+  min-width: 0;
+}
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 23px;
-      min-width: 0;
-    }
+.card p + p {
+  margin-top: 7px;
+}
 
-    .card h3 {
-      color: var(--accent);
-      font-size: 1.12rem;
-      margin-bottom: 8px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-top: 22px;
+}
 
-    .card p, .card li {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+.photo-card {
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  min-width: 0;
+}
 
-    .card ul {
-      padding-left: 19px;
-    }
+.photo-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  background: #202b25;
+}
 
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-    }
+.photo-caption {
+  padding: 13px;
+}
 
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 15px;
-      margin-top: 22px;
-    }
+.photo-caption h3 {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
 
-    .photo-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
-      min-width: 0;
-    }
+.photo-caption p {
+  font-size: .88rem;
+}
 
-    .photo-card img {
-      height: 220px;
-      transition: transform 0.3s ease;
-    }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
 
-    .photo-card:hover img {
-      transform: scale(1.035);
-    }
+.skill {
+  background: #1b2721;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  padding: 7px 13px;
+  font-size: .9rem;
+}
 
-    .photo-caption {
-      padding: 13px 14px;
-    }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
 
-    .photo-caption h3 {
-      color: var(--accent);
-      font-size: 0.98rem;
-      margin-bottom: 3px;
-      overflow-wrap: anywhere;
-    }
+.contact-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  overflow-wrap: anywhere;
+}
 
-    .photo-caption p {
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
+.contact-item strong {
+  display: block;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
 
-    .education-card {
-      margin-bottom: 16px;
-    }
+footer {
+  border-top: 1px solid var(--border);
+  padding: 25px 0;
+  text-align: center;
+  color: var(--muted);
+}
 
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 15px;
-    }
+@media(max-width: 800px) {
+  .navbar {
+    padding: 14px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .skill {
-      border: 1px solid var(--border);
-      background: var(--surface2);
-      padding: 8px 13px;
-      border-radius: 999px;
-      color: var(--text);
-      font-size: 0.9rem;
-    }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 15px;
-    }
+  .hero-photo {
+    max-width: 450px;
+  }
 
-    .contact-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px;
-      min-width: 0;
-    }
+  .grid, .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-    .contact-item strong {
-      color: var(--accent);
-      display: block;
-      margin-bottom: 4px;
-    }
+@media(max-width: 520px) {
+  section {
+    padding: 50px 0;
+  }
 
-    .contact-item a, .contact-item p {
-      color: var(--muted);
-      overflow-wrap: anywhere;
-    }
+  .grid, .gallery, .two-grid, .contact-grid {
+    grid-template-columns: 1fr;
+  }
 
-    footer {
-      padding: 25px 0;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 800px) {
-      .navbar {
-        padding: 14px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      nav {
-        justify-content: flex-start;
-        gap: 10px 15px;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .hero-photo {
-        max-width: 420px;
-      }
-
-      .card-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .photo-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 520px) {
-      section {
-        padding: 55px 0;
-      }
-
-      .card-grid, .two-column, .photo-grid, .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-photo img {
-        height: 280px;
-      }
-
-      .photo-card img {
-        height: 245px;
-      }
-
-      nav a {
-        font-size: 0.82rem;
-      }
-    }
-  </style>
+  .hero-photo img {
+    height: 280px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="container navbar">
-      <a class="logo" href="#home">JK Portfolio</a>
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#internships">Internships</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#life">Life at Lokbharati</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container navbar">
+    <a class="logo" href="#home">JK Portfolio</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#internships">Internships</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#life">Life at Lokbharati</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
+<main>
 
-    <!-- HOME -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Welcome to my portfolio</p>
-          <h1>Kotecha Jeet <span>Pareshbhai</span></h1>
-          <p>
-            Student of B.Voc Food &amp; Agro Processing at
-            Lokbharati University for Rural Innovation.
-            This portfolio presents my education, internship experience,
-            skills, achievements and college activities.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#about">Explore My Portfolio</a>
-            <a class="btn btn-outline" href="#contact">Contact Me</a>
-          </div>
-        </div>
-
-        <div class="hero-photo">
-          <img
-            src="images/excellance%20photo.jpeg"
-            alt="Portfolio photograph"
-            loading="eager"
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="container">
-        <p class="eyebrow">Introduction</p>
-        <h2 class="section-title">About Me</h2>
-        <div class="accent-line"></div>
-
-        <div class="two-column">
-          <div class="card">
-            <h3>Who I Am</h3>
-            <p>
-              I am Kotecha Jeet Pareshbhai, a student of
-              B.Voc Food &amp; Agro Processing at Lokbharati University
-              for Rural Innovation. I am interested in learning through
-              practical work, field activities and industry experience.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>My Learning Journey</h3>
-            <p>
-              Through internships and academic activities, I aim to develop
-              practical knowledge of food processing, product development,
-              quality control and rural innovation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education">
-      <div class="container">
-        <p class="eyebrow">Academic background</p>
-        <h2 class="section-title">Education</h2>
-        <div class="accent-line"></div>
-
-        <div class="card education-card">
-          <h3>B.Voc Food &amp; Agro Processing</h3>
-          <p>Lokbharati University for Rural Innovation</p>
-          <p>Current level: Second Year (SY)</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTERNSHIPS -->
-    <section id="internships">
-      <div class="container">
-        <p class="eyebrow">Practical experience</p>
-        <h2 class="section-title">Internships</h2>
-        <p class="section-intro">
-          My internship experiences helped me understand practical work
-          in food processing, product development and quality control.
-        </p>
-
-        <div class="card-grid">
-          <article class="card">
-            <h3>Vadrad Internship</h3>
-            <p><strong>Area:</strong> Canning</p>
-            <p>
-              Learned about canning-related work and practical food
-              processing activities.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Kukma Internship</h3>
-            <p><strong>Area:</strong> Non-food product</p>
-            <p>
-              Gained practical exposure to product-related activities
-              during the internship.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Rajkot Internship</h3>
-            <p><strong>Organization:</strong> Gopal Snacks Limited</p>
-            <p><strong>Department:</strong> Quality Control (QC)</p>
-            <p>
-              Gained exposure to quality control work in the food industry.
-            </p>
-          </article>
-        </div>
-
-        <h3 style="margin-top:35px;">Internship Photo Gallery</h3>
-
-        <div class="photo-grid">
-          <article class="photo-card">
-            <img
-              src="images/vadrad%20photoes.jpeg"
-              alt="Vadrad internship photograph"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>Vadrad</h3>
-              <p>Internship experience</p>
-            </div>
-          </article>
-
-          <article class="photo-card">
-            <img
-              src="images/kukma%20kaam%202.jpeg"
-              alt="Kukma internship work"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>Kukma Work</h3>
-              <p>Practical work experience</p>
-            </div>
-          </article>
-
-          <article class="photo-card">
-            <img
-              src="images/kukma%20certificate.jpeg"
-              alt="Kukma internship certificate"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>Kukma Certificate</h3>
-              <p>Internship certificate</p>
-            </div>
-          </article>
-
-          <article class="photo-card">
-            <img
-              src="images/kukma%20kaam.jpeg"
-              alt="Kukma practical work"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>Kukma Practical Work</h3>
-              <p>Work experience</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACHIEVEMENTS -->
-    <section id="achievements">
-      <div class="container">
-        <p class="eyebrow">Progress and accomplishments</p>
-        <h2 class="section-title">Achievements</h2>
-        <div class="accent-line"></div>
-
-        <div class="card">
-          <h3>Learning Through Experience</h3>
-          <p>
-            My practical assignments, internship activities and academic
-            work are important parts of my learning journey.
-          </p>
-        </div>
-
-        <div class="photo-grid">
-          <article class="photo-card">
-            <img
-              src="images/exelance%20kaam.jpeg"
-              alt="Excellence-related work"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>Excellence Work</h3>
-              <p>Academic or practical work</p>
-            </div>
-          </article>
-
-          <article class="photo-card">
-            <img
-              src="images/kukma%20certificate.jpeg"
-              alt="Internship certificate"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>Certificate</h3>
-              <p>Internship achievement</p>
-            </div>
-          </article>
-
-          <article class="photo-card">
-            <img
-              src="images/excellance%20photo.jpeg"
-              alt="Excellence photograph"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>My Work</h3>
-              <p>Learning and progress</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- LIFE AT LOKBHARATI -->
-    <section id="life">
-      <div class="container">
-        <p class="eyebrow">Campus and activities</p>
-        <h2 class="section-title">Life at Lokbharati</h2>
-        <p class="section-intro">
-          My university journey includes practical learning, teamwork,
-          workshops and opportunities to develop new skills.
-        </p>
-
-        <div class="photo-grid">
-          <article class="photo-card">
-            <img
-              src="images/vadrad%20photoes.jpeg"
-              alt="Practical learning photograph"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>Practical Learning</h3>
-              <p>Learning through experience</p>
-            </div>
-          </article>
-
-          <article class="photo-card">
-            <img
-              src="images/kukma%20kaam%202.jpeg"
-              alt="Work activity"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>Work Activities</h3>
-              <p>Hands-on learning</p>
-            </div>
-          </article>
-
-          <article class="photo-card">
-            <img
-              src="images/excelance%20kaam.jpeg"
-              alt="Academic activity"
-              loading="lazy"
-            >
-            <div class="photo-caption">
-              <h3>Academic Activities</h3>
-              <p>Learning and development</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="container">
-        <p class="eyebrow">What I am developing</p>
-        <h2 class="section-title">Skills</h2>
-        <div class="accent-line"></div>
-
-        <div class="card">
-          <h3>Areas of Learning</h3>
-          <div class="skill-list">
-            <span class="skill">Food Processing</span>
-            <span class="skill">Agro Processing</span>
-            <span class="skill">Canning</span>
-            <span class="skill">Quality Control</span>
-            <span class="skill">Product Development</span>
-            <span class="skill">Practical Learning</span>
-            <span class="skill">Teamwork</span>
-            <span class="skill">Communication</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <p class="eyebrow">Get in touch</p>
-        <h2 class="section-title">Contact Me</h2>
-        <p class="section-intro">
-          You can contact me through the details and social links below.
-        </p>
-
-        <div class="contact-grid">
-          <div class="contact-item">
-            <strong>Mobile</strong>
-            <a href="tel:+917984862594">+91 79848 62594</a>
-          </div>
-
-          <div class="contact-item">
-            <strong>Email</strong>
-            <a href="mailto:jeetkotecha09@gmail.com">
-              jeetkotecha09@gmail.com
-            </a>
-          </div>
-
-          <div class="contact-item">
-            <strong>Instagram</strong>
-            <a
-              href="https://www.instagram.com/jeet__14_33/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @jeet__14_33
-            </a>
-          </div>
-
-          <div class="contact-item">
-            <strong>GitHub</strong>
-            <a
-              href="https://github.com/jeetkotecha63-bit"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View my GitHub profile
-            </a>
-          </div>
-
-          <div class="contact-item">
-            <strong>University</strong>
-            <p>Lokbharati University for Rural Innovation</p>
-          </div>
-
-          <div class="contact-item">
-            <strong>Department</strong>
-            <p>B.Voc Food &amp; Agro Processing</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Welcome to my portfolio</p>
+      <h1>Kotecha Jeet <span>Pareshbhai</span></h1>
       <p>
-        © <span id="year"></span> Kotecha Jeet Pareshbhai.
-        All rights reserved.
+        Student of B.Voc Food &amp; Agro Processing at
+        Lokbharati University for Rural Innovation.
+        This portfolio showcases my education, internship experience,
+        achievements and practical learning.
       </p>
-      <p>Personal Portfolio | Learning • Experience • Growth</p>
+      <div class="buttons">
+        <a class="btn primary" href="#about">Explore Portfolio</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+    <div class="hero-photo">
+      <img src="excellance%20photo.jpeg"
+           alt="My portfolio photograph">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <p class="eyebrow">Introduction</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="line"></div>
+
+    <div class="two-grid">
+      <div class="card">
+        <h3>Who I Am</h3>
+        <p>
+          I am Kotecha Jeet Pareshbhai, a student of B.Voc Food &amp;
+          Agro Processing at Lokbharati University for Rural Innovation.
+          I am interested in practical learning and gaining industry experience.
+        </p>
+      </div>
+      <div class="card">
+        <h3>My Learning Journey</h3>
+        <p>
+          My learning interests include food processing, product development,
+          quality control, teamwork and rural innovation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <p class="eyebrow">Academic background</p>
+    <h2 class="section-title">Education</h2>
+    <div class="line"></div>
+    <div class="card">
+      <h3>B.Voc Food &amp; Agro Processing</h3>
+      <p>Lokbharati University for Rural Innovation</p>
+      <p>Second Year (SY)</p>
+    </div>
+  </div>
+</section>
+
+<section id="internships">
+  <div class="container">
+    <p class="eyebrow">Practical experience</p>
+    <h2 class="section-title">Internships</h2>
+    <div class="line"></div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Vadrad Internship</h3>
+        <p>Area: Canning</p>
+        <p>Practical exposure to food processing and canning activities.</p>
+      </div>
+      <div class="card">
+        <h3>Kukma Internship</h3>
+        <p>Area: Non-food product</p>
+        <p>Practical learning through product-related activities.</p>
+      </div>
+      <div class="card">
+        <h3>Rajkot Internship</h3>
+        <p>Organization: Gopal Snacks Limited</p>
+        <p>Department: Quality Control (QC)</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:32px;">Internship Photo Gallery</h3>
+
+    <div class="gallery">
+      <article class="photo-card">
+        <img src="vadrad%20photoes.jpeg"
+             alt="Vadrad internship photograph" loading="lazy">
+        <div class="photo-caption">
+          <h3>Vadrad</h3>
+          <p>Internship experience</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="kukma%20kaam%202.jpeg"
+             alt="Kukma internship work" loading="lazy">
+        <div class="photo-caption">
+          <h3>Kukma Work</h3>
+          <p>Practical work experience</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="kukma%20certificate.jpeg"
+             alt="Kukma internship certificate" loading="lazy">
+        <div class="photo-caption">
+          <h3>Kukma Certificate</h3>
+          <p>Internship certificate</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="kukma%20kaam.jpeg"
+             alt="Kukma practical work" loading="lazy">
+        <div class="photo-caption">
+          <h3>Kukma Practical Work</h3>
+          <p>Work experience</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="container">
+    <p class="eyebrow">Progress and accomplishments</p>
+    <h2 class="section-title">Achievements</h2>
+    <div class="line"></div>
+
+    <div class="card">
+      <h3>Learning Through Experience</h3>
+      <p>
+        My practical assignments, internship activities and academic work
+        are important parts of my learning journey.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <article class="photo-card">
+        <img src="exelance%20kaam.jpeg"
+             alt="Excellence-related work" loading="lazy">
+        <div class="photo-caption">
+          <h3>Excellence Work</h3>
+          <p>Academic or practical work</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="kukma%20certificate.jpeg"
+             alt="Internship certificate" loading="lazy">
+        <div class="photo-caption">
+          <h3>Certificate</h3>
+          <p>Internship achievement</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="excellance%20photo.jpeg"
+             alt="Excellence photograph" loading="lazy">
+        <div class="photo-caption">
+          <h3>My Work</h3>
+          <p>Learning and progress</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="life">
+  <div class="container">
+    <p class="eyebrow">Campus and activities</p>
+    <h2 class="section-title">Life at Lokbharati</h2>
+    <p>
+      My university journey includes practical learning, teamwork,
+      workshops and opportunities to develop new skills.
+    </p>
+
+    <div class="gallery">
+      <article class="photo-card">
+        <img src="vadrad%20photoes.jpeg"
+             alt="Practical learning" loading="lazy">
+        <div class="photo-caption">
+          <h3>Practical Learning</h3>
+          <p>Learning through experience</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="kukma%20kaam%202.jpeg"
+             alt="Work activity" loading="lazy">
+        <div class="photo-caption">
+          <h3>Work Activities</h3>
+          <p>Hands-on learning</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="exelance%20kaam.jpeg"
+             alt="Academic activity" loading="lazy">
+        <div class="photo-caption">
+          <h3>Academic Activities</h3>
+          <p>Learning and development</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <p class="eyebrow">What I am developing</p>
+    <h2 class="section-title">Skills</h2>
+    <div class="line"></div>
+
+    <div class="card">
+      <h3>Areas of Learning</h3>
+      <div class="skills">
+        <span class="skill">Food Processing</span>
+        <span class="skill">Agro Processing</span>
+        <span class="skill">Canning</span>
+        <span class="skill">Quality Control</span>
+        <span class="skill">Product Development</span>
+        <span class="skill">Practical Learning</span>
+        <span class="skill">Teamwork</span>
+        <span class="skill">Communication</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <p class="eyebrow">Get in touch</p>
+    <h2 class="section-title">Contact Me</h2>
+    <p>You can contact me through the details below.</p>
+    <div class="line"></div>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <strong>Mobile</strong>
+        <a href="tel:+917984862594">+91 79848 62594</a>
+      </div>
+      <div class="contact-item">
+        <strong>Email</strong>
+        <a href="mailto:jeetkotecha09@gmail.com">
+          jeetkotecha09@gmail.com
+        </a>
+      </div>
+      <div class="contact-item">
+        <strong>Instagram</strong>
+        <a href="https://www.instagram.com/jeet__14_33/"
+           target="_blank" rel="noopener noreferrer">
+          @jeet__14_33
+        </a>
+      </div>
+      <div class="contact-item">
+        <strong>GitHub</strong>
+        <a href="https://github.com/jeetkotecha63-bit"
+           target="_blank" rel="noopener noreferrer">
+          View my GitHub profile
+        </a>
+      </div>
+      <div class="contact-item">
+        <strong>University</strong>
+        <p>Lokbharati University for Rural Innovation</p>
+      </div>
+      <div class="contact-item">
+        <strong>Department</strong>
+        <p>B.Voc Food &amp; Agro Processing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>
+      &copy; <span id="year"></span> Kotecha Jeet Pareshbhai.
+      All rights reserved.
+    </p>
+    <p>Personal Portfolio | Learning • Experience • Growth</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
 
 </body>
 </html>
