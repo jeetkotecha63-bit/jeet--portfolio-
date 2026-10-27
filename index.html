@@ -7,20 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0b0d12">
 <title>Kotecha Jeet Pareshbhai | Portfolio</title>
-
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{font-family:Arial,Helvetica,sans-serif;background:#0b0d12;color:#f4f5f7;line-height:1.7}
 a{color:inherit;text-decoration:none}
 .container{width:90%;max-width:1100px;margin:auto}
-header{position:sticky;top:0;z-index:10;background:rgba(11,13,18,.96);border-bottom:1px solid #252a35}
-nav{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+header{position:sticky;top:0;z-index:10;background:rgba(11,13,18,.97);border-bottom:1px solid #252a35}
+nav{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:10px 0}
 .logo{font-size:23px;font-weight:800;color:#70e5c0}
-.navlinks{display:flex;gap:22px;flex-wrap:wrap}
-.navlinks a{font-size:14px;color:#d5d9e2}
+.navlinks{display:flex;gap:15px;flex-wrap:wrap}
+.navlinks a{font-size:13px;color:#d5d9e2}
 .navlinks a:hover{color:#70e5c0}
-.hero{min-height:75vh;display:flex;align-items:center;padding:75px 0;gap:45px}
+.hero{min-height:70vh;display:flex;align-items:center;padding:65px 0;gap:35px}
 .hero-content{flex:1}
 .tag{color:#70e5c0;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold}
 h1{font-size:clamp(36px,7vw,68px);line-height:1.12;margin:15px 0}
@@ -28,55 +27,60 @@ h1 span{color:#70e5c0}
 h2{font-size:30px;margin-bottom:15px}
 h3{font-size:19px;margin-bottom:8px}
 p{color:#b8c0ce;margin:12px 0}
-.hero-box{width:250px;height:250px;flex-shrink:0;border:1px solid #303b49;border-radius:28px;background:linear-gradient(145deg,#172b2b,#171a25);display:flex;align-items:center;justify-content:center;color:#70e5c0;font-size:70px;font-weight:800}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 20px;margin:14px 10px 0 0;border-radius:10px;background:#70e5c0;color:#08121c;font-weight:bold;border:1px solid #70e5c0;transition:.2s}
-.btn:hover{transform:translateY(-2px);opacity:.9}
+.hero-box{width:220px;height:220px;flex-shrink:0;border:1px solid #303b49;border-radius:28px;background:linear-gradient(145deg,#172b2b,#171a25);display:flex;align-items:center;justify-content:center;color:#70e5c0;font-size:65px;font-weight:800}
+.btn{display:inline-block;padding:11px 17px;margin:8px 7px 0 0;border-radius:9px;background:#70e5c0;color:#08121c;font-weight:bold;border:0;cursor:pointer;font-size:14px}
 .btn.secondary{background:transparent;color:#70e5c0;border:1px solid #70e5c0}
-section{padding:65px 0;border-top:1px solid #202530}
-.section-intro{max-width:700px;margin-bottom:25px}
+section{padding:55px 0;border-top:1px solid #202530}
+.section-intro{max-width:750px;margin-bottom:24px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.card{background:#121620;border:1px solid #292f3b;border-radius:16px;padding:23px}
+.card{background:#121620;border:1px solid #292f3b;border-radius:16px;padding:22px;min-width:0}
 .card p{font-size:15px}
-.pill{display:inline-block;padding:5px 10px;margin:5px 5px 0 0;border:1px solid #35434a;border-radius:20px;color:#70e5c0;font-size:13px}
-.placeholder{border:1px dashed #46505e;border-radius:12px;min-height:100px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:#9ba6b7;margin-top:14px}
+.pill{display:inline-block;padding:5px 10px;margin:5px 5px 0 0;border:1px solid #35434a;border-radius:20px;color:#70e5c0;font-size:12px}
 .skill-list{display:flex;flex-wrap:wrap;gap:10px}
-.skill{padding:10px 15px;border-radius:10px;background:#171d28;border:1px solid #303847;color:#dfe5ee}
-.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:25px}
-.contact-card{background:#121620;border:1px solid #292f3b;border-radius:15px;padding:20px;display:flex;align-items:center;gap:15px;overflow-wrap:anywhere}
-.contact-icon{font-size:28px;min-width:42px;text-align:center}
-.contact-card h3{margin-bottom:3px}
-.contact-card p{margin:0;font-size:14px}
-.contact-card a{color:#70e5c0}
-.contact-card a:hover{text-decoration:underline}
+.skill{padding:10px 14px;border-radius:10px;background:#171d28;border:1px solid #303847;color:#dfe5ee}
+.placeholder{border:1px dashed #46505e;border-radius:12px;min-height:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;color:#9ba6b7;margin-top:12px}
+.internship-card{margin-bottom:22px}
+.internship-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.duration{color:#70e5c0;border:1px solid #35434a;border-radius:20px;padding:4px 10px;font-size:12px}
+label{display:block;color:#dce3eb;font-size:13px;margin:10px 0 5px}
+input,textarea{width:100%;background:#0b0d12;color:#f4f5f7;border:1px solid #35404e;border-radius:9px;padding:11px;font:inherit;font-size:14px}
+textarea{min-height:95px;resize:vertical}
+input[type=file]{padding:9px}
+.field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+.photo-grid img{width:100%;height:130px;object-fit:cover;border-radius:10px;border:1px solid #303847}
+.file-item{padding:10px;background:#0b0d12;border:1px solid #303847;border-radius:9px;margin-top:8px;overflow-wrap:anywhere}
+.file-item a{color:#70e5c0}
+.small{font-size:12px;color:#929baa}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:20px}
+.contact-card{background:#121620;border:1px solid #292f3b;border-radius:14px;padding:18px;overflow-wrap:anywhere}
+.contact-icon{font-size:25px}
 footer{padding:30px 0;text-align:center;color:#929baa}
 footer p{font-size:13px}
+.status{font-size:12px;color:#70e5c0;margin-top:8px}
 @media(max-width:700px){
-nav{padding:14px 0;align-items:flex-start;flex-direction:column}
-.navlinks{gap:12px 17px}
-.navlinks a{font-size:13px}
-.hero{min-height:auto;flex-direction:column-reverse;align-items:flex-start;padding:55px 0}
-.hero-box{width:125px;height:125px;border-radius:22px;font-size:42px}
-.grid,.contact-grid{grid-template-columns:1fr}
-section{padding:48px 0}
+nav{align-items:flex-start;flex-direction:column}
+.navlinks{gap:10px 14px}
+.navlinks a{font-size:12px}
+.hero{min-height:auto;flex-direction:column-reverse;align-items:flex-start;padding:45px 0}
+.hero-box{width:115px;height:115px;font-size:40px}
+.grid,.contact-grid,.field-grid{grid-template-columns:1fr}
+.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+section{padding:42px 0}
 h2{font-size:26px}
 }
 </style>
 </head>
-
 <body>
 <header>
 <div class="container">
 <nav>
 <a class="logo" href="#home">JEET.</a>
 <div class="navlinks">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#internship">Internship</a>
-<a href="#achievements">Achievements</a>
-<a href="#lokbharati">Lokbharati</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
+<a href="#home">Home</a><a href="#about">About</a>
+<a href="#education">Education</a><a href="#internship">Internships</a>
+<a href="#achievements">Achievements</a><a href="#lokbharati">Lokbharati</a>
+<a href="#skills">Skills</a><a href="#contact">Contact</a>
 </div>
 </nav>
 </div>
@@ -92,175 +96,222 @@ h2{font-size:26px}
 <a class="btn" href="#about">Discover More</a>
 <a class="btn secondary" href="#contact">Contact Me</a>
 </div>
-<div class="hero-box" aria-label="Jeet initials">JK</div>
+<div class="hero-box">JK</div>
 </section>
 
-<section id="about">
-<div class="container">
-<div class="tag">Get to know me</div>
-<h2>About Me</h2>
+<section id="about"><div class="container">
+<div class="tag">Get to know me</div><h2>About Me</h2>
 <div class="section-intro">
 <p>My name is Kotecha Jeet Pareshbhai. I am pursuing B.Voc in Agro &amp; Food Processing. I believe in learning through experience, developing useful skills, and improving myself every day.</p>
-<p>This portfolio is a record of my education, practical experiences, achievements, and journey at Lokbharati. I will continue updating it as I learn and achieve new things.</p>
+<p>This portfolio presents my education, industrial training, achievements, interests, and journey at Lokbharati. I will continue updating it as I learn and achieve new things.</p>
 </div>
-</div>
-</section>
+</div></section>
 
-<section id="education">
-<div class="container">
-<div class="tag">My academic journey</div>
-<h2>Education</h2>
+<section id="education"><div class="container">
+<div class="tag">My academic journey</div><h2>Education</h2>
 <div class="grid">
-<div class="card">
-<h3>B.Voc Agro &amp; Food Processing</h3>
-<p>Current Programme</p>
-<p>Learning about agro-based industries, food processing, value addition, practical operations, and related subjects.</p>
-<span class="pill">Agro Processing</span>
-<span class="pill">Food Technology</span>
+<div class="card"><h3>B.Voc Agro &amp; Food Processing</h3><p>Current Programme</p><p>Learning about agro-based industries, food processing, value addition, practical operations, and related subjects.</p><span class="pill">Agro Processing</span><span class="pill">Food Technology</span></div>
+<div class="card"><h3>Practical Learning</h3><p>Developing knowledge through college activities, workshops, industrial exposure, projects, and teamwork.</p><span class="pill">Hands-on Learning</span><span class="pill">Teamwork</span></div>
 </div>
-<div class="card">
-<h3>Practical Learning</h3>
-<p>Developing knowledge through college activities, workshops, industrial exposure, projects, and teamwork.</p>
-<span class="pill">Hands-on Learning</span>
-<span class="pill">Teamwork</span>
-</div>
-</div>
-</div>
-</section>
+</div></section>
 
-<section id="internship">
-<div class="container">
+<section id="internship"><div class="container">
 <div class="tag">Learning beyond the classroom</div>
-<h2>Internship Experience</h2>
-<div class="section-intro">
-<p>This section is reserved for my industrial internships and practical training. I will add each new experience here as I complete it.</p>
-</div>
-<div class="card">
-<h3>My Industrial Learning Journey</h3>
-<p>New internship details will be added here in the future, including the organization, location, duration, work performed, learning outcomes, photographs, and certificate.</p>
-<div class="placeholder">Internship photographs will be added later.</div>
-<div class="placeholder">Internship certificate will be added later.</div>
-<p><span class="pill">Future Internship Updates</span><span class="pill">Practical Experience</span></p>
-</div>
-</div>
-</section>
+<h2>My Internship Experience</h2>
+<div class="section-intro"><p>I have completed five internships in food processing, quality control, non-food products, and hospitality. Each experience helped me develop practical knowledge and new skills.</p></div>
+<div id="internships"></div>
+<p class="small">Use the edit options below each internship to update its details, add photos, or attach a certificate.</p>
+</div></section>
 
-<section id="achievements">
-<div class="container">
-<div class="tag">Milestones and progress</div>
-<h2>My Achievements</h2>
-<div class="section-intro">
-<p>This section will showcase my certificates, awards, academic achievements, completed projects, and important milestones.</p>
-</div>
+<section id="achievements"><div class="container">
+<div class="tag">Milestones and progress</div><h2>My Achievements</h2>
+<div class="section-intro"><p>This section will showcase my certificates, awards, academic achievements, completed projects, and important milestones.</p></div>
 <div class="grid">
-<div class="card">
-<h3>Certificates &amp; Awards</h3>
-<p>Certificates and awards can be added as I receive them.</p>
-<div class="placeholder">Achievement photos or certificates will appear here.</div>
+<div class="card"><h3>Certificates &amp; Awards</h3><p>Certificates and awards can be added as I receive them.</p><div class="placeholder">Achievement photos or certificates will be added later.</div></div>
+<div class="card"><h3>Projects &amp; Activities</h3><p>My projects, workshops, presentations, and other accomplishments.</p><div class="placeholder">Project details and photographs will be added later.</div></div>
 </div>
-<div class="card">
-<h3>Projects &amp; Activities</h3>
-<p>My projects, workshops, presentations, and other accomplishments.</p>
-<div class="placeholder">Project details and photographs will be added later.</div>
-</div>
-</div>
-</div>
-</section>
+</div></section>
 
-<section id="lokbharati">
-<div class="container">
-<div class="tag">Learning and memories</div>
-<h2>Life at Lokbharati</h2>
-<div class="section-intro">
-<p>My journey at Lokbharati is an opportunity to learn, participate in activities, work with others, and develop values alongside academic knowledge.</p>
-</div>
+<section id="lokbharati"><div class="container">
+<div class="tag">Learning and memories</div><h2>Life at Lokbharati</h2>
+<div class="section-intro"><p>My journey at Lokbharati is an opportunity to learn, participate in activities, work with others, and develop values alongside academic knowledge.</p></div>
 <div class="grid">
-<div class="card">
-<h3>College Life</h3>
-<p>A place to learn new things, share ideas, build friendships, and grow through everyday experiences.</p>
-<div class="placeholder">College life photographs will be added later.</div>
+<div class="card"><h3>College Life</h3><p>A place to learn new things, share ideas, build friendships, and grow through everyday experiences.</p><div class="placeholder">College life photographs can be added later.</div></div>
+<div class="card"><h3>Workshops &amp; Activities</h3><p>Workshops, cultural events, rural innovation, group activities, and memorable learning experiences.</p><div class="placeholder">Workshop and activity photographs can be added later.</div></div>
 </div>
-<div class="card">
-<h3>Workshops &amp; Activities</h3>
-<p>Workshops, cultural events, rural innovation, group activities, and memorable learning experiences.</p>
-<div class="placeholder">Workshop and activity photographs will be added later.</div>
-</div>
-</div>
-</div>
-</section>
+</div></section>
 
-<section id="skills">
-<div class="container">
-<div class="tag">Things I enjoy</div>
-<h2>Skills &amp; Interests</h2>
+<section id="skills"><div class="container">
+<div class="tag">Things I enjoy</div><h2>Skills &amp; Interests</h2>
 <p>My interests help me learn, stay curious, and keep improving.</p>
 <div class="skill-list">
-<span class="skill">🏏 Cricket</span>
-<span class="skill">📚 Reading</span>
-<span class="skill">📈 Share Market Learning</span>
-<span class="skill">🌱 Agro &amp; Food Processing</span>
-<span class="skill">🤝 Teamwork</span>
-<span class="skill">💡 New Ideas</span>
+<span class="skill">🏏 Cricket</span><span class="skill">📚 Reading</span>
+<span class="skill">📈 Share Market Learning</span><span class="skill">🌱 Agro &amp; Food Processing</span>
+<span class="skill">🤝 Teamwork</span><span class="skill">💡 New Ideas</span>
 </div>
-</div>
-</section>
+</div></section>
 
-<section id="contact">
-<div class="container">
-<div class="tag">Let's connect</div>
-<h2>Contact Me</h2>
+<section id="contact"><div class="container">
+<div class="tag">Let's connect</div><h2>Contact Me</h2>
 <p>Thank you for visiting my portfolio. Feel free to contact me or connect with me on social media.</p>
-
 <div class="contact-grid">
-<div class="contact-card">
-<div class="contact-icon">📞</div>
-<div>
-<h3>Phone / WhatsApp</h3>
-<p><a href="tel:+917984862594">+91 79848 62594</a></p>
-<a class="btn" href="https://wa.me/917984862594" target="_blank" rel="noopener noreferrer">💬 Message on WhatsApp</a>
+<div class="contact-card"><div class="contact-icon">📞</div><h3>Phone / WhatsApp</h3><p><a href="tel:+917984862594">+91 79848 62594</a></p><a class="btn" href="https://wa.me/917984862594" target="_blank" rel="noopener">Message on WhatsApp</a></div>
+<div class="contact-card"><div class="contact-icon">📧</div><h3>Gmail</h3><p><a href="mailto:YOUR_EMAIL@gmail.com">YOUR_EMAIL@gmail.com</a></p><a class="btn secondary" href="mailto:YOUR_EMAIL@gmail.com">Send Email</a></div>
+<div class="contact-card"><div class="contact-icon">📸</div><h3>Instagram</h3><p><a href="https://www.instagram.com/jeet__14_33/" target="_blank" rel="noopener">@jeet__14_33</a></p><a class="btn" href="https://www.instagram.com/jeet__14_33/" target="_blank" rel="noopener">Follow on Instagram</a></div>
+<div class="contact-card"><div class="contact-icon">💻</div><h3>GitHub</h3><p><a href="https://github.com/jeetkotecha63-bit" target="_blank" rel="noopener">jeetkotecha63-bit</a></p><a class="btn secondary" href="https://github.com/jeetkotecha63-bit" target="_blank" rel="noopener">Visit GitHub</a></div>
 </div>
-</div>
-
-<div class="contact-card">
-<div class="contact-icon">📧</div>
-<div>
-<h3>Gmail</h3>
-<p><a href="mailto:jeetkotecha09@gmail.com">jeetkotecha09@gmail.com@gmail.com</a></p>
-<a class="btn secondary" href="mailto:jeetkotecha09@@gmail.com">✉️ Send Email</a>
-</div>
-</div>
-
-<div class="contact-card">
-<div class="contact-icon">📸</div>
-<div>
-<h3>Instagram</h3>
-<p><a href="https://www.instagram.com/jeet__14_33/" target="_blank" rel="noopener noreferrer">@jeet__14_33</a></p>
-<a class="btn" href="https://www.instagram.com/jeet__14_33/" target="_blank" rel="noopener noreferrer">📷 Follow on Instagram</a>
-</div>
-</div>
-
-<div class="contact-card">
-<div class="contact-icon">💻</div>
-<div>
-<h3>GitHub</h3>
-<p><a href="https://github.com/jeetkotecha63-bit" target="_blank" rel="noopener noreferrer">jeetkotecha63-bit</a></p>
-<a class="btn secondary" href="https://github.com/jeetkotecha63-bit" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
-</div>
-</div>
-</div>
-</div>
-</section>
+</div></section>
 </main>
 
-<footer>
-<div class="container">
+<footer><div class="container">
 <p>© <span id="year"></span> Kotecha Jeet Pareshbhai. All rights reserved.</p>
 <p>Personal Portfolio | Learning • Growing • Achieving</p>
-</div>
-</footer>
+</div></footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+const initialInternships = [
+ {company:"Center of Excellence, Vadrad",duration:"15 days",department:"Canning, Crop Base",details:"I learned how to carry out canning processes and prepare different food products, including jam and pickles. This experience introduced me to food preservation and value addition.",photoNote:"Photos will be added later.",certificateNote:"Certificate will be added later."},
+ {company:"Ramkrushna Trust, Kukma, Kutch",duration:"15 days",department:"Non-Food Products",details:"I learned how to make products from cow dung and how value addition can turn natural and locally available materials into useful products.",photoNote:"Photos will be added later.",certificateNote:"Certificate will be added later."},
+ {company:"Gopal Snacks Limited, Metoda",duration:"1 month",department:"Quality Control (QC)",details:"I learned about quality control and how samples are checked during food production. I gained an introduction to sample checking and quality assessment procedures.",photoNote:"Photos will be added later.",certificateNote:"Certificate will be added later."},
+ {company:"Sahjanand Restaurant, Mavdi Chowkdi",duration:"20 days",department:"Cooking Methods, Hotel Management",details:"Details of the work performed and skills learned will be added later.",photoNote:"No photos currently.",certificateNote:"No certificate currently."},
+ {company:"Gopal Dairy",duration:"25 days",department:"Cream Department (please edit if needed)",details:"Details of the work performed and skills learned will be added later.",photoNote:"No photos currently.",certificateNote:"Certificate will be added later."}
+];
+
+const DB_NAME = "JeetPortfolioInternshipDB";
+const STORE = "items";
+let db;
+
+function openDB(){
+ return new Promise((resolve,reject)=>{
+  const req=indexedDB.open(DB_NAME,1);
+  req.onupgradeneeded=()=>{req.result.createObjectStore(STORE,{keyPath:"id"})};
+  req.onsuccess=()=>{db=req.result;resolve(db)};
+  req.onerror=()=>reject(req.error);
+ });
+}
+function readItem(id){
+ return new Promise((resolve,reject)=>{
+  const req=db.transaction(STORE,"readonly").objectStore(STORE).get(id);
+  req.onsuccess=()=>resolve(req.result);
+  req.onerror=()=>reject(req.error);
+ });
+}
+function writeItem(item){
+ return new Promise((resolve,reject)=>{
+  const tx=db.transaction(STORE,"readwrite");
+  tx.objectStore(STORE).put(item);
+  tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);
+ });
+}
+function defaultItem(i){
+ return {id:i,...initialInternships[i],photos:[],certificate:null};
+}
+async function getItem(i){return (await readItem(i))||defaultItem(i)}
+function safeText(value){
+ return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function formatSize(bytes){return (bytes/1024/1024).toFixed(2)+" MB"}
+
+async function renderInternships(){
+ const root=document.getElementById("internships");
+ root.innerHTML="";
+ for(let i=0;i<initialInternships.length;i++){
+  const item=await getItem(i);
+  const card=document.createElement("article");
+  card.className="card internship-card";
+  card.innerHTML=`
+   <div class="internship-head">
+    <div><div class="tag">Internship ${i+1}</div><h3>${safeText(item.company)}</h3></div>
+    <span class="duration">${safeText(item.duration)}</span>
+   </div>
+   <p><strong>Department:</strong> ${safeText(item.department)}</p>
+   <p>${safeText(item.details)}</p>
+   <div class="photo-grid" id="photos-${i}"></div>
+   <div id="cert-${i}"></div>
+   <details style="margin-top:18px">
+    <summary style="cursor:pointer;color:#70e5c0;font-weight:bold">✏️ Edit Details &amp; Upload Files</summary>
+    <div class="field-grid">
+     <div><label>Company Name</label><input id="company-${i}" value="${safeText(item.company)}"></div>
+     <div><label>Duration</label><input id="duration-${i}" value="${safeText(item.duration)}"></div>
+    </div>
+    <label>Department</label><input id="department-${i}" value="${safeText(item.department)}">
+    <label>Work &amp; Learning Details</label><textarea id="details-${i}">${safeText(item.details)}</textarea>
+    <label>Choose Photos (you can select multiple)</label>
+    <input type="file" id="photos-input-${i}" accept="image/*" multiple>
+    <p class="small">Select images from your phone. Large files may use substantial browser storage.</p>
+    <label>Choose Certificate (image or PDF)</label>
+    <input type="file" id="cert-input-${i}" accept="image/*,.pdf,application/pdf">
+    <button class="btn" type="button" id="save-${i}">Save Changes</button>
+    <button class="btn secondary" type="button" id="clear-${i}">Remove Saved Photos</button>
+    <p class="status" id="status-${i}" role="status"></p>
+   </details>`;
+  root.appendChild(card);
+  showFiles(item,i);
+  document.getElementById("save-"+i).addEventListener("click",()=>saveInternship(i));
+  document.getElementById("clear-"+i).addEventListener("click",()=>clearPhotos(i));
+ }
+}
+function showFiles(item,i){
+ const photoRoot=document.getElementById("photos-"+i);
+ photoRoot.innerHTML="";
+ (item.photos||[]).forEach((file,index)=>{
+  const url=URL.createObjectURL(file);
+  const img=document.createElement("img");
+  img.src=url;img.alt="Internship "+(i+1)+" photo "+(index+1);
+  img.title="Internship photo";
+  photoRoot.appendChild(img);
+ });
+ const certRoot=document.getElementById("cert-"+i);
+ certRoot.innerHTML="";
+ if(item.certificate){
+  const url=URL.createObjectURL(item.certificate);
+  const div=document.createElement("div");
+  div.className="file-item";
+  const link=document.createElement("a");
+  link.href=url;link.target="_blank";link.rel="noopener";
+  link.textContent="📄 View / Open Certificate: "+item.certificate.name;
+  div.appendChild(link);certRoot.appendChild(div);
+ }
+}
+async function saveInternship(i){
+ const status=document.getElementById("status-"+i);
+ status.textContent="Saving...";
+ try{
+  const old=await getItem(i);
+  const newPhotos=Array.from(document.getElementById("photos-input-"+i).files||[]);
+  const certFile=document.getElementById("cert-input-"+i).files[0]||null;
+  const item={
+   id:i,
+   company:document.getElementById("company-"+i).value.trim(),
+   duration:document.getElementById("duration-"+i).value.trim(),
+   department:document.getElementById("department-"+i).value.trim(),
+   details:document.getElementById("details-"+i).value.trim(),
+   photos:[...(old.photos||[]),...newPhotos],
+   certificate:certFile||old.certificate||null
+  };
+  await writeItem(item);
+  await renderInternships();
+  const updated=document.getElementById("status-"+i);
+  if(updated)updated.textContent="Saved on this browser/device.";
+ }catch(err){
+  status.textContent="Could not save. Try fewer or smaller photos, or check browser storage.";
+  console.error(err);
+ }
+}
+async function clearPhotos(i){
+ if(!confirm("Remove all saved photos for this internship?"))return;
+ try{
+  const item=await getItem(i);item.photos=[];
+  await writeItem(item);await renderInternships();
+ }catch(err){alert("Could not remove photos: "+err.message)}
+}
+(async function(){
+ document.getElementById("year").textContent=new Date().getFullYear();
+ try{await openDB();await renderInternships()}
+ catch(err){
+  document.getElementById("internships").innerHTML='<p>Sorry, your browser does not support local file storage. Please try an updated browser.</p>';
+ }
+})();
 </script>
 </body>
 </html>
