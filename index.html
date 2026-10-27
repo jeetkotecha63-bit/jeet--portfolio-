@@ -11,299 +11,252 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#0b0d12;color:#f4f5f7;line-height:1.7
-}
+body{font-family:Arial,Helvetica,sans-serif;background:#0b0d12;color:#f4f5f7;line-height:1.7}
 a{color:inherit;text-decoration:none}
 .container{width:90%;max-width:1100px;margin:auto}
-header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(11,13,18,.96);
-  border-bottom:1px solid #252a35
-}
-nav{
-  min-height:72px;display:flex;justify-content:space-between;
-  align-items:center;gap:20px
-}
+header{position:sticky;top:0;z-index:10;background:rgba(11,13,18,.96);border-bottom:1px solid #252a35}
+nav{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:20px}
 .logo{font-size:23px;font-weight:800;color:#70e5c0}
 .navlinks{display:flex;gap:22px;flex-wrap:wrap}
 .navlinks a{font-size:14px;color:#d5d9e2}
 .navlinks a:hover{color:#70e5c0}
-.hero{
-  min-height:75vh;display:flex;align-items:center;
-  padding:75px 0;gap:45px
-}
+.hero{min-height:75vh;display:flex;align-items:center;padding:75px 0;gap:45px}
 .hero-content{flex:1}
-.tag{
-  color:#70e5c0;text-transform:uppercase;
-  letter-spacing:3px;font-size:12px;font-weight:bold
-}
+.tag{color:#70e5c0;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold}
 h1{font-size:clamp(36px,7vw,68px);line-height:1.12;margin:15px 0}
 h1 span{color:#70e5c0}
 h2{font-size:30px;margin-bottom:15px}
 h3{font-size:19px;margin-bottom:8px}
 p{color:#b8c0ce;margin:12px 0}
-.hero-box{
-  width:250px;height:250px;flex-shrink:0;
-  border:1px solid #303b49;border-radius:28px;
-  background:linear-gradient(145deg,#172b2b,#171a25);
-  display:flex;align-items:center;justify-content:center;
-  color:#70e5c0;font-size:70px;font-weight:800
-}
-.btn{
-  display:inline-block;padding:12px 20px;margin:14px 10px 0 0;
-  border-radius:10px;background:#70e5c0;color:#08121c;
-  font-weight:bold
-}
+.hero-box{width:250px;height:250px;flex-shrink:0;border:1px solid #303b49;border-radius:28px;background:linear-gradient(145deg,#172b2b,#171a25);display:flex;align-items:center;justify-content:center;color:#70e5c0;font-size:70px;font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 20px;margin:14px 10px 0 0;border-radius:10px;background:#70e5c0;color:#08121c;font-weight:bold;border:1px solid #70e5c0;transition:.2s}
+.btn:hover{transform:translateY(-2px);opacity:.9}
 .btn.secondary{background:transparent;color:#70e5c0;border:1px solid #70e5c0}
 section{padding:65px 0;border-top:1px solid #202530}
 .section-intro{max-width:700px;margin-bottom:25px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.card{
-  background:#121620;border:1px solid #292f3b;
-  border-radius:16px;padding:23px
-}
+.card{background:#121620;border:1px solid #292f3b;border-radius:16px;padding:23px}
 .card p{font-size:15px}
-.pill{
-  display:inline-block;padding:5px 10px;margin:5px 5px 0 0;
-  border:1px solid #35434a;border-radius:20px;
-  color:#70e5c0;font-size:13px
-}
-.placeholder{
-  border:1px dashed #46505e;border-radius:12px;
-  min-height:100px;display:flex;align-items:center;
-  justify-content:center;text-align:center;padding:18px;
-  color:#9ba6b7;margin-top:14px
-}
+.pill{display:inline-block;padding:5px 10px;margin:5px 5px 0 0;border:1px solid #35434a;border-radius:20px;color:#70e5c0;font-size:13px}
+.placeholder{border:1px dashed #46505e;border-radius:12px;min-height:100px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:#9ba6b7;margin-top:14px}
 .skill-list{display:flex;flex-wrap:wrap;gap:10px}
-.skill{
-  padding:10px 15px;border-radius:10px;
-  background:#171d28;border:1px solid #303847;color:#dfe5ee
-}
+.skill{padding:10px 15px;border-radius:10px;background:#171d28;border:1px solid #303847;color:#dfe5ee}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:25px}
+.contact-card{background:#121620;border:1px solid #292f3b;border-radius:15px;padding:20px;display:flex;align-items:center;gap:15px;overflow-wrap:anywhere}
+.contact-icon{font-size:28px;min-width:42px;text-align:center}
+.contact-card h3{margin-bottom:3px}
+.contact-card p{margin:0;font-size:14px}
+.contact-card a{color:#70e5c0}
+.contact-card a:hover{text-decoration:underline}
 footer{padding:30px 0;text-align:center;color:#929baa}
 footer p{font-size:13px}
 @media(max-width:700px){
-  nav{padding:14px 0;align-items:flex-start;flex-direction:column}
-  .navlinks{gap:12px 17px}
-  .navlinks a{font-size:13px}
-  .hero{min-height:auto;flex-direction:column-reverse;align-items:flex-start;padding:55px 0}
-  .hero-box{width:125px;height:125px;border-radius:22px;font-size:42px}
-  .grid{grid-template-columns:1fr}
-  section{padding:48px 0}
-  h2{font-size:26px}
+nav{padding:14px 0;align-items:flex-start;flex-direction:column}
+.navlinks{gap:12px 17px}
+.navlinks a{font-size:13px}
+.hero{min-height:auto;flex-direction:column-reverse;align-items:flex-start;padding:55px 0}
+.hero-box{width:125px;height:125px;border-radius:22px;font-size:42px}
+.grid,.contact-grid{grid-template-columns:1fr}
+section{padding:48px 0}
+h2{font-size:26px}
 }
 </style>
 </head>
 
 <body>
 <header>
-  <div class="container">
-    <nav>
-      <a class="logo" href="#home">JEET.</a>
-      <div class="navlinks">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#internship">Internship</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#lokbharati">Lokbharati</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
+<div class="container">
+<nav>
+<a class="logo" href="#home">JEET.</a>
+<div class="navlinks">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#internship">Internship</a>
+<a href="#achievements">Achievements</a>
+<a href="#lokbharati">Lokbharati</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</div>
 </header>
 
 <main>
-  <section class="container hero" id="home">
-    <div class="hero-content">
-      <div class="tag">Welcome to my portfolio</div>
-      <h1>Hi, I'm<br><span>Kotecha Jeet</span></h1>
-      <h3>Student | Learner | Future Professional</h3>
-      <p>
-        I am a B.Voc Agro & Food Processing student interested in
-        practical learning, personal growth, and exploring new opportunities.
-      </p>
-      <a class="btn" href="#about">Discover More</a>
-      <a class="btn secondary" href="#contact">Contact Me</a>
-    </div>
-    <div class="hero-box" aria-label="Jeet initials">JK</div>
-  </section>
+<section class="container hero" id="home">
+<div class="hero-content">
+<div class="tag">Welcome to my portfolio</div>
+<h1>Hi, I'm<br><span>Kotecha Jeet</span></h1>
+<h3>Student | Learner | Future Professional</h3>
+<p>I am a B.Voc Agro &amp; Food Processing student interested in practical learning, personal growth, and exploring new opportunities.</p>
+<a class="btn" href="#about">Discover More</a>
+<a class="btn secondary" href="#contact">Contact Me</a>
+</div>
+<div class="hero-box" aria-label="Jeet initials">JK</div>
+</section>
 
-  <section id="about">
-    <div class="container">
-      <div class="tag">Get to know me</div>
-      <h2>About Me</h2>
-      <div class="section-intro">
-        <p>
-          My name is Kotecha Jeet Pareshbhai. I am pursuing B.Voc in
-          Agro & Food Processing. I believe in learning through experience,
-          developing useful skills, and improving myself every day.
-        </p>
-        <p>
-          This portfolio is a record of my education, practical experiences,
-          achievements, and journey at Lokbharati. I will continue updating
-          it as I learn and achieve new things.
-        </p>
-      </div>
-    </div>
-  </section>
+<section id="about">
+<div class="container">
+<div class="tag">Get to know me</div>
+<h2>About Me</h2>
+<div class="section-intro">
+<p>My name is Kotecha Jeet Pareshbhai. I am pursuing B.Voc in Agro &amp; Food Processing. I believe in learning through experience, developing useful skills, and improving myself every day.</p>
+<p>This portfolio is a record of my education, practical experiences, achievements, and journey at Lokbharati. I will continue updating it as I learn and achieve new things.</p>
+</div>
+</div>
+</section>
 
-  <section id="education">
-    <div class="container">
-      <div class="tag">My academic journey</div>
-      <h2>Education</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>B.Voc Agro & Food Processing</h3>
-          <p>Current Programme</p>
-          <p>
-            Learning about agro-based industries, food processing,
-            value addition, practical operations, and related subjects.
-          </p>
-          <span class="pill">Agro Processing</span>
-          <span class="pill">Food Technology</span>
-        </div>
-        <div class="card">
-          <h3>Practical Learning</h3>
-          <p>
-            Developing knowledge through college activities, workshops,
-            industrial exposure, projects, and teamwork.
-          </p>
-          <span class="pill">Hands-on Learning</span>
-          <span class="pill">Teamwork</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="education">
+<div class="container">
+<div class="tag">My academic journey</div>
+<h2>Education</h2>
+<div class="grid">
+<div class="card">
+<h3>B.Voc Agro &amp; Food Processing</h3>
+<p>Current Programme</p>
+<p>Learning about agro-based industries, food processing, value addition, practical operations, and related subjects.</p>
+<span class="pill">Agro Processing</span>
+<span class="pill">Food Technology</span>
+</div>
+<div class="card">
+<h3>Practical Learning</h3>
+<p>Developing knowledge through college activities, workshops, industrial exposure, projects, and teamwork.</p>
+<span class="pill">Hands-on Learning</span>
+<span class="pill">Teamwork</span>
+</div>
+</div>
+</div>
+</section>
 
-  <section id="internship">
-    <div class="container">
-      <div class="tag">Learning beyond the classroom</div>
-      <h2>Internship Experience</h2>
-      <div class="section-intro">
-        <p>
-          This section is reserved for my industrial internships and
-          practical training. I will add each new experience here as
-          I complete it.
-        </p>
-      </div>
-      <div class="card">
-        <h3>My Industrial Learning Journey</h3>
-        <p>
-          New internship details will be added here in the future,
-          including the organization, location, duration, work performed,
-          learning outcomes, photographs, and certificate.
-        </p>
-        <div class="placeholder">
-          Internship photographs will be added later.
-        </div>
-        <div class="placeholder">
-          Internship certificate will be added later.
-        </div>
-        <p>
-          <span class="pill">Future Internship Updates</span>
-          <span class="pill">Practical Experience</span>
-        </p>
-      </div>
-    </div>
-  </section>
+<section id="internship">
+<div class="container">
+<div class="tag">Learning beyond the classroom</div>
+<h2>Internship Experience</h2>
+<div class="section-intro">
+<p>This section is reserved for my industrial internships and practical training. I will add each new experience here as I complete it.</p>
+</div>
+<div class="card">
+<h3>My Industrial Learning Journey</h3>
+<p>New internship details will be added here in the future, including the organization, location, duration, work performed, learning outcomes, photographs, and certificate.</p>
+<div class="placeholder">Internship photographs will be added later.</div>
+<div class="placeholder">Internship certificate will be added later.</div>
+<p><span class="pill">Future Internship Updates</span><span class="pill">Practical Experience</span></p>
+</div>
+</div>
+</section>
 
-  <section id="achievements">
-    <div class="container">
-      <div class="tag">Milestones and progress</div>
-      <h2>My Achievements</h2>
-      <div class="section-intro">
-        <p>
-          This section will showcase my certificates, awards, academic
-          achievements, completed projects, and important milestones.
-        </p>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <h3>Certificates & Awards</h3>
-          <p>Certificates and awards can be added as I receive them.</p>
-          <div class="placeholder">Achievement photos or certificates will appear here.</div>
-        </div>
-        <div class="card">
-          <h3>Projects & Activities</h3>
-          <p>My projects, workshops, presentations, and other accomplishments.</p>
-          <div class="placeholder">Project details and photographs will be added later.</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="achievements">
+<div class="container">
+<div class="tag">Milestones and progress</div>
+<h2>My Achievements</h2>
+<div class="section-intro">
+<p>This section will showcase my certificates, awards, academic achievements, completed projects, and important milestones.</p>
+</div>
+<div class="grid">
+<div class="card">
+<h3>Certificates &amp; Awards</h3>
+<p>Certificates and awards can be added as I receive them.</p>
+<div class="placeholder">Achievement photos or certificates will appear here.</div>
+</div>
+<div class="card">
+<h3>Projects &amp; Activities</h3>
+<p>My projects, workshops, presentations, and other accomplishments.</p>
+<div class="placeholder">Project details and photographs will be added later.</div>
+</div>
+</div>
+</div>
+</section>
 
-  <section id="lokbharati">
-    <div class="container">
-      <div class="tag">Learning and memories</div>
-      <h2>Life at Lokbharati</h2>
-      <div class="section-intro">
-        <p>
-          My journey at Lokbharati is an opportunity to learn, participate
-          in activities, work with others, and develop values alongside
-          academic knowledge.
-        </p>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <h3>College Life</h3>
-          <p>
-            A place to learn new things, share ideas, build friendships,
-            and grow through everyday experiences.
-          </p>
-          <div class="placeholder">College life photographs will be added later.</div>
-        </div>
-        <div class="card">
-          <h3>Workshops & Activities</h3>
-          <p>
-            Workshops, cultural events, rural innovation, group activities,
-            and memorable learning experiences.
-          </p>
-          <div class="placeholder">Workshop and activity photographs will be added later.</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="lokbharati">
+<div class="container">
+<div class="tag">Learning and memories</div>
+<h2>Life at Lokbharati</h2>
+<div class="section-intro">
+<p>My journey at Lokbharati is an opportunity to learn, participate in activities, work with others, and develop values alongside academic knowledge.</p>
+</div>
+<div class="grid">
+<div class="card">
+<h3>College Life</h3>
+<p>A place to learn new things, share ideas, build friendships, and grow through everyday experiences.</p>
+<div class="placeholder">College life photographs will be added later.</div>
+</div>
+<div class="card">
+<h3>Workshops &amp; Activities</h3>
+<p>Workshops, cultural events, rural innovation, group activities, and memorable learning experiences.</p>
+<div class="placeholder">Workshop and activity photographs will be added later.</div>
+</div>
+</div>
+</div>
+</section>
 
-  <section id="skills">
-    <div class="container">
-      <div class="tag">Things I enjoy</div>
-      <h2>Skills & Interests</h2>
-      <p>My interests help me learn, stay curious, and keep improving.</p>
-      <div class="skill-list">
-        <span class="skill">🏏 Cricket</span>
-        <span class="skill">📚 Reading</span>
-        <span class="skill">📈 Share Market Learning</span>
-        <span class="skill">🌱 Agro & Food Processing</span>
-        <span class="skill">🤝 Teamwork</span>
-        <span class="skill">💡 New Ideas</span>
-      </div>
-    </div>
-  </section>
+<section id="skills">
+<div class="container">
+<div class="tag">Things I enjoy</div>
+<h2>Skills &amp; Interests</h2>
+<p>My interests help me learn, stay curious, and keep improving.</p>
+<div class="skill-list">
+<span class="skill">🏏 Cricket</span>
+<span class="skill">📚 Reading</span>
+<span class="skill">📈 Share Market Learning</span>
+<span class="skill">🌱 Agro &amp; Food Processing</span>
+<span class="skill">🤝 Teamwork</span>
+<span class="skill">💡 New Ideas</span>
+</div>
+</div>
+</section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="tag">Let's connect</div>
-      <h2>Contact</h2>
-      <p>
-        Thank you for visiting my portfolio. I look forward to learning,
-        connecting, and exploring new opportunities.
-      </p>
-      <a class="btn secondary"
-         href="https://github.com/jeetkotecha63-bit"
-         target="_blank" rel="noopener noreferrer">
-        Visit My GitHub
-      </a>
-    </div>
-  </section>
+<section id="contact">
+<div class="container">
+<div class="tag">Let's connect</div>
+<h2>Contact Me</h2>
+<p>Thank you for visiting my portfolio. Feel free to contact me or connect with me on social media.</p>
+
+<div class="contact-grid">
+<div class="contact-card">
+<div class="contact-icon">📞</div>
+<div>
+<h3>Phone / WhatsApp</h3>
+<p><a href="tel:+917984862594">+91 79848 62594</a></p>
+<a class="btn" href="https://wa.me/917984862594" target="_blank" rel="noopener noreferrer">💬 Message on WhatsApp</a>
+</div>
+</div>
+
+<div class="contact-card">
+<div class="contact-icon">📧</div>
+<div>
+<h3>Gmail</h3>
+<p><a href="mailto:jeetkotecha09@gmail.com">jeetkotecha09@gmail.com@gmail.com</a></p>
+<a class="btn secondary" href="mailto:jeetkotecha09@@gmail.com">✉️ Send Email</a>
+</div>
+</div>
+
+<div class="contact-card">
+<div class="contact-icon">📸</div>
+<div>
+<h3>Instagram</h3>
+<p><a href="https://www.instagram.com/jeet__14_33/" target="_blank" rel="noopener noreferrer">@jeet__14_33</a></p>
+<a class="btn" href="https://www.instagram.com/jeet__14_33/" target="_blank" rel="noopener noreferrer">📷 Follow on Instagram</a>
+</div>
+</div>
+
+<div class="contact-card">
+<div class="contact-icon">💻</div>
+<div>
+<h3>GitHub</h3>
+<p><a href="https://github.com/jeetkotecha63-bit" target="_blank" rel="noopener noreferrer">jeetkotecha63-bit</a></p>
+<a class="btn secondary" href="https://github.com/jeetkotecha63-bit" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+</div>
+</div>
+</div>
+</div>
+</section>
 </main>
 
 <footer>
-  <div class="container">
-    <p>© <span id="year"></span> Kotecha Jeet Pareshbhai. All rights reserved.</p>
-    <p>Personal Portfolio | Learning • Growing • Achieving</p>
-  </div>
+<div class="container">
+<p>© <span id="year"></span> Kotecha Jeet Pareshbhai. All rights reserved.</p>
+<p>Personal Portfolio | Learning • Growing • Achieving</p>
+</div>
 </footer>
 
 <script>
