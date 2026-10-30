@@ -5,631 +5,366 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101714">
-<title>Kotecha Jeet Pareshbhai | Portfolio</title>
-
+<meta name="theme-color" content="#102a56">
+<meta name="description" content="Jeet Kotecha — B.Voc Food & Agro Processing student at Lokbharati University for Rural Innovation.">
+<title>Jeet Kotecha | Student Portfolio</title>
 <style>
-:root {
-  --bg: #0c1210;
-  --card: #141d19;
-  --text: #f2f7f3;
-  --muted: #aab9b0;
-  --accent: #83edb2;
-  --border: rgba(131,237,178,.2);
+:root{
+  --navy:#102a56;--navy2:#183d73;--blue:#3679c9;--sky:#eaf4ff;--pale:#f5f9ff;
+  --white:#fff;--ink:#17243a;--muted:#65748b;--line:#dce7f4;--accent:#b8d9ff;
+  --shadow:0 16px 45px rgba(22,55,99,.09);--radius:22px;
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:#fbfdff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{width:min(1140px,calc(100% - 42px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(220,231,244,.9)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{font-weight:900;letter-spacing:.04em;color:var(--navy);font-size:1.05rem}.brand b{color:var(--blue)}
+nav{display:flex;align-items:center;gap:19px}
+nav a{font-size:.87rem;font-weight:650;color:#52627a;transition:.2s}
+nav a:hover,nav a.active{color:var(--blue)}
+.nav-cta{background:var(--navy);color:white!important;padding:10px 15px;border-radius:12px}
+.menu-btn{display:none;border:1px solid var(--line);background:white;color:var(--navy);border-radius:11px;padding:8px 12px;font-size:1.1rem}
+.hero{padding:82px 0 72px;display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center;min-height:610px;position:relative}
+.hero:before{content:"";position:absolute;width:390px;height:390px;border-radius:50%;background:#eaf4ff;filter:blur(2px);right:0;top:65px;z-index:-1}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid #d7e8fb;border-radius:100px;background:#f3f8ff;color:var(--navy2);font-size:.82rem;font-weight:750;letter-spacing:.03em}
+.pill i{width:8px;height:8px;background:#4a91df;border-radius:50%;box-shadow:0 0 0 5px #dceeff}
+h1{font-size:clamp(2.8rem,6.5vw,5.4rem);line-height:1.02;letter-spacing:-.065em;color:var(--navy);margin:23px 0 18px}
+h1 span{color:var(--blue)}
+.hero-copy{font-size:1.1rem;color:var(--muted);max-width:650px;margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:13px;border:1px solid var(--line);font-weight:750;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(16,42,86,.12)}
+.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn.light{background:white;color:var(--navy);border-color:#cbdcf0}
+.btn.blue{background:#eaf4ff;color:var(--navy);border-color:#d7e8fb}
+.profile-wrap{display:flex;justify-content:center;position:relative}
+.profile-card{width:min(100%,360px);padding:27px;border-radius:30px;background:white;border:1px solid #dce9f7;box-shadow:0 24px 65px rgba(16,42,86,.13);position:relative}
+.profile-card:before{content:"";position:absolute;inset:12px;border:1px solid #edf3fa;border-radius:23px;pointer-events:none}
+.avatar{width:180px;height:180px;border-radius:28px;margin:4px auto 22px;background:linear-gradient(145deg,#dceeff,#f3f8ff);border:5px solid white;box-shadow:0 8px 26px rgba(34,91,153,.13);display:grid;place-items:center;overflow:hidden;color:var(--navy);font-size:3rem;font-weight:900;position:relative}
+.avatar img{width:100%;height:100%;object-fit:cover;display:none}
+.profile-card h2{text-align:center;color:var(--navy);font-size:1.35rem;margin:0}
+.profile-card .role{text-align:center;color:var(--blue);font-weight:700;font-size:.92rem;margin:4px 0 20px}
+.profile-meta{border-top:1px solid #edf1f7;padding:11px 0;display:flex;justify-content:space-between;gap:12px;font-size:.88rem}
+.profile-meta span:first-child{color:var(--muted)}.profile-meta span:last-child{text-align:right;font-weight:650;color:#34445c}
+.float-note{position:absolute;bottom:24px;left:-28px;background:white;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:15px;padding:12px 16px;font-size:.84rem;color:var(--navy);font-weight:750}
+section{padding:78px 0}
+.section-head{margin-bottom:30px}
+.eyebrow{color:var(--blue);font-size:.76rem;text-transform:uppercase;letter-spacing:.17em;font-weight:900}
+.section-title{font-size:clamp(2rem,4vw,2.85rem);line-height:1.15;letter-spacing:-.045em;color:var(--navy);margin:7px 0 9px}
+.section-desc{margin:0;color:var(--muted);max-width:740px}
+.soft{background:var(--pale)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}
+.quote-card,.content-card,.card,.internship-card,.project-card{background:white;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.quote-card{padding:30px;background:linear-gradient(145deg,#eaf4ff,#fff)}
+.quote{font-size:1.55rem;font-weight:850;line-height:1.35;color:var(--navy);letter-spacing:-.03em}
+.quote span{color:var(--blue)}
+.content-card{padding:28px;color:#5e6d82}
+.content-card p:first-child{margin-top:0}.content-card strong{color:var(--navy)}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.tag{padding:7px 12px;border-radius:100px;background:#f0f6fd;border:1px solid #dceafa;color:#315b8e;font-size:.83rem;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{padding:24px;transition:transform .22s,border-color .22s}
+.card:hover,.internship-card:hover,.project-card:hover{transform:translateY(-5px);border-color:#b8d5f5}
+.card-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:#edf5ff;color:var(--navy);font-size:1.4rem;margin-bottom:15px}
+.card h3,.internship-card h3,.project-card h3{margin:0 0 7px;color:var(--navy);font-size:1.1rem}
+.card p,.internship-card p,.project-card p{margin:0;color:var(--muted);font-size:.93rem}
+.education-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.education-card{padding:25px;border-radius:20px;background:white;border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.education-card:after{content:"";position:absolute;width:95px;height:95px;border-radius:50%;background:#edf5ff;right:-28px;top:-30px}
+.edu-year{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:900}
+.education-card h3{margin:9px 0 5px;color:var(--navy)}
+.education-card p{margin:0;color:var(--muted);font-size:.93rem}
+.internship-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.internship-card{padding:25px;transition:.22s}
+.internship-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:15px}
+.company-mark{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;border-radius:15px;background:#edf5ff;color:var(--navy);font-size:1.35rem}
+.location{display:inline-block;margin-top:4px;color:var(--blue);font-size:.83rem;font-weight:750}
+.dept-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.dept{font-size:.8rem;font-weight:750;color:#345c8c;background:#f0f6fd;border:1px solid #dfebf8;border-radius:9px;padding:6px 9px}
+.note{font-size:.82rem;color:#7b8798;margin-top:16px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project-card{padding:26px;transition:.22s}
+.project-card .project-number{font-size:.78rem;font-weight:900;color:var(--blue);letter-spacing:.14em}
+.project-card h3{font-size:1.2rem;margin-top:8px}
+.project-card ul{padding-left:19px;color:var(--muted);font-size:.91rem;margin:12px 0 0}
+.timeline{border-left:2px solid #cfe2f7;margin:6px 0 0 10px;padding-left:25px}
+.timeline-item{position:relative;padding:0 0 25px}
+.timeline-item:before{content:"";position:absolute;left:-32px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px #e6f2ff}
+.timeline-item h3{margin:0 0 4px;color:var(--navy);font-size:1.05rem}.timeline-item p{margin:0;color:var(--muted)}
+.resume-panel{padding:32px;border:1px solid #cfe2f7;border-radius:25px;background:linear-gradient(120deg,#eaf4ff,#fff);display:flex;justify-content:space-between;align-items:center;gap:25px}
+.resume-panel h3{font-size:1.45rem;color:var(--navy);margin:4px 0}
+.resume-panel p{margin:0;color:var(--muted);max-width:640px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:white;border:1px solid var(--line);border-radius:20px;padding:23px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow)}
+.contact-icon{width:45px;height:45px;border-radius:14px;background:#edf5ff;display:grid;place-items:center;color:var(--navy);font-size:1.2rem;flex:0 0 45px}
+.contact-card small{display:block;color:var(--muted);font-weight:700}.contact-card strong{color:var(--navy);overflow-wrap:anywhere}
+.social-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+footer{padding:28px 0;background:#102a56;color:#dceaff;font-size:.88rem}
+.footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:850px){
+  .hero{grid-template-columns:1fr;gap:45px;padding-top:55px;min-height:auto}
+  .hero:before{width:260px;height:260px;top:auto;bottom:0}
+  .profile-wrap{padding:0 15px 25px}
+  .float-note{left:-5px}
+  nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;border-bottom:1px solid var(--line);padding:18px 22px;flex-direction:column;align-items:stretch}
+  nav.open{display:flex}
+  .menu-btn{display:block}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
 }
-
-body {
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  width: min(1100px, 90%);
-  margin: auto;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: #0c1210;
-  border-bottom: 1px solid var(--border);
-}
-
-.navbar {
-  min-height: 72px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  font-size: 1.4rem;
-  color: var(--accent);
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-}
-
-nav a {
-  color: var(--muted);
-  font-size: .85rem;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-section {
-  padding: 70px 0;
-  scroll-margin-top: 85px;
-}
-
-.hero {
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  background: radial-gradient(ellipse at top right, #1c392a, transparent 50%);
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  align-items: center;
-  gap: 40px;
-}
-
-.eyebrow {
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: .82rem;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-h1 {
-  font-size: clamp(2.3rem, 5vw, 4.2rem);
-  line-height: 1.15;
-  margin-bottom: 18px;
-  overflow-wrap: anywhere;
-}
-
-h1 span, h2 span {
-  color: var(--accent);
-}
-
-p {
-  color: var(--muted);
-}
-
-.hero-photo {
-  padding: 10px;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  background: var(--card);
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 13px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 17px;
-  border-radius: 8px;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  font-weight: bold;
-}
-
-.btn.primary {
-  background: var(--accent);
-  color: #102017;
-}
-
-.section-title {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  margin-bottom: 12px;
-}
-
-.line {
-  height: 4px;
-  width: 55px;
-  background: var(--accent);
-  border-radius: 5px;
-  margin: 14px 0 25px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.two-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 15px;
-  padding: 22px;
-  min-width: 0;
-}
-
-.card h3 {
-  color: var(--accent);
-  margin-bottom: 8px;
-}
-
-.card p + p {
-  margin-top: 7px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 17px;
-  margin-top: 22px;
-}
-
-.photo-card {
-  overflow: hidden;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  min-width: 0;
-}
-
-.photo-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
-  background: #202b25;
-}
-
-.photo-caption {
-  padding: 13px;
-}
-
-.photo-caption h3 {
-  color: var(--accent);
-  font-size: 1rem;
-  margin-bottom: 3px;
-}
-
-.photo-caption p {
-  font-size: .88rem;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.skill {
-  background: #1b2721;
-  border: 1px solid var(--border);
-  border-radius: 25px;
-  padding: 7px 13px;
-  font-size: .9rem;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 15px;
-}
-
-.contact-item {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 18px;
-  overflow-wrap: anywhere;
-}
-
-.contact-item strong {
-  display: block;
-  color: var(--accent);
-  margin-bottom: 5px;
-}
-
-footer {
-  border-top: 1px solid var(--border);
-  padding: 25px 0;
-  text-align: center;
-  color: var(--muted);
-}
-
-@media(max-width: 800px) {
-  .navbar {
-    padding: 14px 0;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-photo {
-    max-width: 450px;
-  }
-
-  .grid, .gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media(max-width: 520px) {
-  section {
-    padding: 50px 0;
-  }
-
-  .grid, .gallery, .two-grid, .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-photo img {
-    height: 280px;
-  }
+@media(max-width:580px){
+  .wrap{width:min(100% - 30px,1140px)}
+  section{padding:58px 0}
+  .grid,.education-grid,.internship-grid,.project-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{padding:48px 0}
+  .hero-copy{font-size:1rem}
+  .resume-panel{display:block}
+  .resume-panel .btn{margin-top:18px}
+  .profile-card{padding:22px}
+  .avatar{width:155px;height:155px}
+  .actions .btn,.resume-panel .btn{width:100%}
+  .resume-panel{padding:24px}
+  .quote-card,.content-card{padding:23px}
 }
 </style>
 </head>
-
 <body>
-
-<header>
-  <div class="container navbar">
-    <a class="logo" href="#home">JK Portfolio</a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#internships">Internships</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#life">Life at Lokbharati</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+<header class="no-print">
+  <div class="wrap nav">
+    <a class="brand" href="#home">JEET<span><b>.</b></span> PORTFOLIO</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="navLinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#education">Education</a><a href="#internships">Internships</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
 
-<main>
-
-<section class="hero" id="home">
-  <div class="container hero-grid">
+<main class="no-print">
+  <div class="wrap hero" id="home">
     <div>
-      <p class="eyebrow">Welcome to my portfolio</p>
-      <h1>Kotecha Jeet <span>Pareshbhai</span></h1>
-      <p>
-        Student of B.Voc Food &amp; Agro Processing at
-        Lokbharati University for Rural Innovation.
-        This portfolio showcases my education, internship experience,
-        achievements and practical learning.
-      </p>
-      <div class="buttons">
-        <a class="btn primary" href="#about">Explore Portfolio</a>
-        <a class="btn" href="#contact">Contact Me</a>
+      <div class="pill"><i></i> STUDENT • LEARNER • EXPLORER</div>
+      <h1>Hello, I'm<br><span>Jeet Kotecha.</span></h1>
+      <p class="hero-copy">A B.Voc Food & Agro Processing student at Lokbharati University for Rural Innovation. I enjoy learning through practical experience, exploring food processing, and turning ideas into meaningful work.</p>
+      <div class="actions">
+        <a class="btn primary" href="#internships">Explore My Experience ↗</a>
+        <button class="btn light" type="button" onclick="downloadResume()">Download Resume ↓</button>
       </div>
     </div>
-
-    <div class="hero-photo">
-    <img src="jeet pic.jpeg"
-     alt="Kotecha Jeet Pareshbhai">
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <p class="eyebrow">Introduction</p>
-    <h2 class="section-title">About Me</h2>
-    <div class="line"></div>
-
-    <div class="two-grid">
-      <div class="card">
-        <h3>Who I Am</h3>
-        <p>
-          I am Kotecha Jeet Pareshbhai, a student of B.Voc Food &amp;
-          Agro Processing at Lokbharati University for Rural Innovation.
-          I am interested in practical learning and gaining industry experience.
-        </p>
+    <div class="profile-wrap">
+      <div class="profile-card">
+        <div class="avatar" id="avatarFallback">
+          <span id="avatarInitials">JK</span>
+          <img id="profilePhoto" src="profile.jpg" alt="Jeet Kotecha profile photo">
+        </div>
+        <h2>Jeet Kotecha</h2>
+        <p class="role">B.Voc Food & Agro Processing</p>
+        <div class="profile-meta"><span>University</span><span>Lokbharati University</span></div>
+        <div class="profile-meta"><span>Current Year</span><span>Second Year</span></div>
+        <div class="profile-meta"><span>Based in</span><span>Gujarat, India</span></div>
       </div>
-      <div class="card">
-        <h3>My Learning Journey</h3>
-        <p>
-          My learning interests include food processing, product development,
-          quality control, teamwork and rural innovation.
-        </p>
-      </div>
+      <div class="float-note">✦ Learning by doing</div>
     </div>
   </div>
-</section>
 
-<section id="education">
-  <div class="container">
-    <p class="eyebrow">Academic background</p>
-    <h2 class="section-title">Education</h2>
-    <div class="line"></div>
-    <div class="card">
-      <h3>B.Voc Food &amp; Agro Processing</h3>
-      <p>Lokbharati University for Rural Innovation</p>
-      <p>Second Year (SY)</p>
-    </div>
-  </div>
-</section>
-
-<section id="internships">
-  <div class="container">
-    <p class="eyebrow">Practical experience</p>
-    <h2 class="section-title">Internships</h2>
-    <div class="line"></div>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Vadrad Internship</h3>
-        <p>Area: Canning</p>
-        <p>Practical exposure to food processing and canning activities.</p>
-      </div>
-      <div class="card">
-        <h3>Kukma Internship</h3>
-        <p>Area: Non-food product</p>
-        <p>Practical learning through product-related activities.</p>
-      </div>
-      <div class="card">
-        <h3>Rajkot Internship</h3>
-        <p>Organization: Gopal Snacks Limited</p>
-        <p>Department: Quality Control (QC)</p>
+  <section id="about" class="soft reveal">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">01 / About me</div><h2 class="section-title">A little about my journey</h2><p class="section-desc">Curiosity, practical learning, and a willingness to explore new opportunities shape my student journey.</p></div>
+      <div class="about-grid">
+        <div class="quote-card"><div class="quote">“Learn something new.<br><span>Build something meaningful.</span>”</div><p class="note">My approach to learning and personal growth.</p></div>
+        <div class="content-card">
+          <p>Hello! I’m <strong>Jeet Kotecha</strong>, currently studying <strong>B.Voc Food & Agro Processing</strong> at <strong>Lokbharati University for Rural Innovation</strong>.</p>
+          <p>My learning interests include food processing, quality control, agricultural value addition, and practical work. Through internships and academic activities, I have had opportunities to observe different work environments and understand how classroom learning connects with industry.</p>
+          <p>This portfolio brings together my education, internship exposure, projects, interests, and the skills I continue to develop.</p>
+          <div class="tags"><span class="tag">Food & Agro Processing</span><span class="tag">Practical Learning</span><span class="tag">Quality Control Exposure</span><span class="tag">Continuous Growth</span></div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <h3 style="margin-top:32px;">Internship Photo Gallery</h3>
-
-    <div class="gallery">
-      <article class="photo-card">
-        <img src="vadrad%20photoes.jpeg"
-             alt="Vadrad internship photograph" loading="lazy">
-        <div class="photo-caption">
-          <h3>Vadrad</h3>
-          <p>Internship experience</p>
-        </div>
-      </article>
-
-      <article class="photo-card">
-        <img src="kukma%20kaam%202.jpeg"
-             alt="Kukma internship work" loading="lazy">
-        <div class="photo-caption">
-          <h3>Kukma Work</h3>
-          <p>Practical work experience</p>
-        </div>
-      </article>
-
-      <article class="photo-card">
-        <img src="kukma%20certificate.jpeg"
-             alt="Kukma internship certificate" loading="lazy">
-        <div class="photo-caption">
-          <h3>Kukma Certificate</h3>
-          <p>Internship certificate</p>
-        </div>
-      </article>
-
-      <article class="photo-card">
-        <img src="kukma%20kaam.jpeg"
-             alt="Kukma practical work" loading="lazy">
-        <div class="photo-caption">
-          <h3>Kukma Practical Work</h3>
-          <p>Work experience</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="achievements">
-  <div class="container">
-    <p class="eyebrow">Progress and accomplishments</p>
-    <h2 class="section-title">Achievements</h2>
-    <div class="line"></div>
-
-    <div class="card">
-      <h3>Learning Through Experience</h3>
-      <p>
-        My practical assignments, internship activities and academic work
-        are important parts of my learning journey.
-      </p>
-    </div>
-
-    <div class="gallery">
-      <article class="photo-card">
-        <img src="exelance%20kaam.jpeg"
-             alt="Excellence-related work" loading="lazy">
-        <div class="photo-caption">
-          <h3>Excellence Work</h3>
-          <p>Academic or practical work</p>
-        </div>
-      </article>
-
-      <article class="photo-card">
-        <img src="kukma%20certificate.jpeg"
-             alt="Internship certificate" loading="lazy">
-        <div class="photo-caption">
-          <h3>Certificate</h3>
-          <p>Internship achievement</p>
-        </div>
-      </article>
-
-      <article class="photo-card">
-        <img src="excellance%20photo.jpeg"
-             alt="Excellence photograph" loading="lazy">
-        <div class="photo-caption">
-          <h3>My Work</h3>
-          <p>Learning and progress</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="life">
-  <div class="container">
-    <p class="eyebrow">Campus and activities</p>
-    <h2 class="section-title">Life at Lokbharati</h2>
-    <p>
-      My university journey includes practical learning, teamwork,
-      workshops and opportunities to develop new skills.
-    </p>
-
-    <div class="gallery">
-      <article class="photo-card">
-        <img src="vadrad%20photoes.jpeg"
-             alt="Practical learning" loading="lazy">
-        <div class="photo-caption">
-          <h3>Practical Learning</h3>
-          <p>Learning through experience</p>
-        </div>
-      </article>
-
-      <article class="photo-card">
-        <img src="kukma%20kaam%202.jpeg"
-             alt="Work activity" loading="lazy">
-        <div class="photo-caption">
-          <h3>Work Activities</h3>
-          <p>Hands-on learning</p>
-        </div>
-      </article>
-
-      <article class="photo-card">
-        <img src="exelance%20kaam.jpeg"
-             alt="Academic activity" loading="lazy">
-        <div class="photo-caption">
-          <h3>Academic Activities</h3>
-          <p>Learning and development</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="container">
-    <p class="eyebrow">What I am developing</p>
-    <h2 class="section-title">Skills</h2>
-    <div class="line"></div>
-
-    <div class="card">
-      <h3>Areas of Learning</h3>
-      <div class="skills">
-        <span class="skill">Food Processing</span>
-        <span class="skill">Agro Processing</span>
-        <span class="skill">Canning</span>
-        <span class="skill">Quality Control</span>
-        <span class="skill">Product Development</span>
-        <span class="skill">Practical Learning</span>
-        <span class="skill">Teamwork</span>
-        <span class="skill">Communication</span>
+  <section id="education" class="reveal">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">02 / Education</div><h2 class="section-title">My academic journey</h2><p class="section-desc">My educational background and the foundation behind my current field of study.</p></div>
+      <div class="education-grid">
+        <article class="education-card"><div class="edu-year">Current • Second Year</div><h3>B.Voc Food & Agro Processing</h3><p><strong>Lokbharati University for Rural Innovation</strong><br>Studying food processing, agro-based products, processing operations, quality, and value addition.</p></article>
+        <article class="education-card"><div class="edu-year">Higher Secondary • Science</div><h3>11th & 12th Science</h3><p><strong>Alpha School, Mendarda</strong><br>Completed higher secondary science education.</p></article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact">
-  <div class="container">
-    <p class="eyebrow">Get in touch</p>
-    <h2 class="section-title">Contact Me</h2>
-    <p>You can contact me through the details below.</p>
-    <div class="line"></div>
+  <section id="internships" class="soft reveal">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">03 / Industry exposure</div><h2 class="section-title">My internships</h2><p class="section-desc">Learning from practical environments, understanding work processes, and getting exposure to different departments.</p></div>
+      <div class="internship-grid">
+        <article class="internship-card">
+          <div class="internship-top"><div><h3>Vadrad Internship</h3><span class="location">Vadrad, Banaskantha</span></div><div class="company-mark">🥫</div></div>
+          <p><strong>Area of exposure: Canning</strong></p>
+          <p>Gained practical exposure to canning-related work and learned about food preservation and processing practices.</p>
+          <div class="dept-list"><span class="dept">Canning</span><span class="dept">Food Preservation</span></div>
+        </article>
+        <article class="internship-card">
+          <div class="internship-top"><div><h3>Kukma Internship</h3><span class="location">Kukma, Gujarat</span></div><div class="company-mark">🧪</div></div>
+          <p><strong>Area of exposure: Non-food Product</strong></p>
+          <p>Explored the preparation and handling of a non-food product and gained practical learning beyond food-based processing.</p>
+          <div class="dept-list"><span class="dept">Non-food Product</span><span class="dept">Practical Learning</span></div>
+        </article>
+        <article class="internship-card">
+          <div class="internship-top"><div><h3>Gopal Snacks Limited</h3><span class="location">Rajkot, Gujarat</span></div><div class="company-mark">🏭</div></div>
+          <p><strong>Department: Quality Control (QC)</strong></p>
+          <p>Received exposure to the Quality Control department in a food manufacturing environment and learned about the importance of quality in food production.</p>
+          <div class="dept-list"><span class="dept">Quality Control</span><span class="dept">Food Industry</span></div>
+        </article>
+        <article class="internship-card">
+          <div class="internship-top"><div><h3>Gopal Dairy</h3><span class="location">Rajkot, Gujarat</span></div><div class="company-mark">🥛</div></div>
+          <p><strong>Departmental exposure</strong></p>
+          <p>Gained exposure across different operational and support departments in a dairy environment.</p>
+          <div class="dept-list"><span class="dept">Crate Department</span><span class="dept">In-Out Report</span><span class="dept">Computer Department</span><span class="dept">Selling Department</span></div>
+        </article>
+      </div>
+      <p class="note">Internship durations and exact dates have not been added because they were not included in the details available.</p>
+    </div>
+  </section>
 
-    <div class="contact-grid">
-      <div class="contact-item">
-        <strong>Mobile</strong>
-        <a href="tel:+917984862594">+91 79848 62594</a>
-      </div>
-      <div class="contact-item">
-        <strong>Email</strong>
-        <a href="mailto:jeetkotecha09@gmail.com">
-          jeetkotecha09@gmail.com
-        </a>
-      </div>
-      <div class="contact-item">
-        <strong>Instagram</strong>
-        <a href="https://www.instagram.com/jeet__14_33/"
-           target="_blank" rel="noopener noreferrer">
-          @jeet__14_33
-        </a>
-      </div>
-      <div class="contact-item">
-        <strong>GitHub</strong>
-        <a href="https://github.com/jeetkotecha63-bit"
-           target="_blank" rel="noopener noreferrer">
-          View my GitHub profile
-        </a>
-      </div>
-      <div class="contact-item">
-        <strong>University</strong>
-        <p>Lokbharati University for Rural Innovation</p>
-      </div>
-      <div class="contact-item">
-        <strong>Department</strong>
-        <p>B.Voc Food &amp; Agro Processing</p>
+  <section id="skills" class="reveal">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">04 / Skills & interests</div><h2 class="section-title">What I’m building</h2><p class="section-desc">A mix of subject-related exposure, digital skills, and personal interests that support my learning.</p></div>
+      <div class="grid">
+        <article class="card"><div class="card-icon">🥫</div><h3>Food Processing</h3><p>Academic learning and practical exposure to food processing and canning.</p></article>
+        <article class="card"><div class="card-icon">🔎</div><h3>Quality Control Exposure</h3><p>Understanding the role of quality control in a food manufacturing environment.</p></article>
+        <article class="card"><div class="card-icon">💻</div><h3>Computer & Digital Learning</h3><p>Developing computer knowledge and using digital tools for academic work.</p></article>
+        <article class="card"><div class="card-icon">🤝</div><h3>Teamwork & Communication</h3><p>Learning through group activities, college work, and practical environments.</p></article>
+        <article class="card"><div class="card-icon">📝</div><h3>Writing & Reading</h3><p>Enjoy writing, reading books, and exploring new ideas.</p></article>
+        <article class="card"><div class="card-icon">📊</div><h3>Market Learning</h3><p>Interested in stock market analysis and learning about market behaviour.</p></article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="projects" class="soft reveal">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">05 / Projects & practical work</div><h2 class="section-title">Ideas into action</h2><p class="section-desc">Selected academic and rural innovation work from my learning journey.</p></div>
+      <div class="project-grid">
+        <article class="project-card"><div class="project-number">PROJECT 01</div><h3>Adjustable Fruit-Picking Tool with Collection Basket</h3><p>A rural innovation concept developed to make fruit picking easier and reduce fruit damage during harvesting.</p><ul><li>Adjustable-length tool for reaching fruits at different heights.</li><li>Cutter positioned at the top of the tool.</li><li>Collection basket below the cutter to catch fruit and help prevent it from falling.</li><li>Survey location: Aambla.</li></ul></article>
+        <article class="project-card"><div class="project-number">PROJECT 02</div><h3>Agro & Food Processing Learning Portfolio</h3><p>A collection of academic learning and practical exposure related to food and agro processing.</p><ul><li>Food processing and preservation topics.</li><li>Industry exposure through internships.</li><li>Learning about quality and processing practices.</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" class="reveal">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">06 / Learning journey</div><h2 class="section-title">Beyond the classroom</h2><p class="section-desc">The experiences that continue to shape my academic and personal growth.</p></div>
+      <div class="timeline">
+        <div class="timeline-item"><h3>Village & rural innovation work</h3><p>Exploring practical solutions to everyday rural challenges through project-based learning.</p></div>
+        <div class="timeline-item"><h3>Industry exposure</h3><p>Learning from internships in canning, non-food product work, quality control, and dairy departments.</p></div>
+        <div class="timeline-item"><h3>College activities & documentation</h3><p>Taking part in academic activities and developing skills in writing, documentation, and digital presentation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies" class="soft reveal">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">07 / Personal interests</div><h2 class="section-title">Things I enjoy</h2><p class="section-desc">Interests that keep me creative, curious, and active.</p></div>
+      <div class="grid">
+        <article class="card"><div class="card-icon">🏏</div><h3>Cricket</h3><p>A sport I enjoy for its teamwork, focus, and discipline.</p></article>
+        <article class="card"><div class="card-icon">🥁</div><h3>Playing Tabla</h3><p>Enjoy learning and expressing creativity through rhythm and music.</p></article>
+        <article class="card"><div class="card-icon">📖</div><h3>Books & Writing</h3><p>Reading and writing as ways to explore thoughts and ideas.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="reveal">
+    <div class="wrap">
+      <div class="resume-panel">
+        <div><div class="eyebrow">08 / Resume</div><h3>Want a quick overview?</h3><p>Generate a clean, print-ready resume from the information currently shown in this portfolio. You can choose “Save as PDF” in the print window.</p></div>
+        <button class="btn primary" type="button" onclick="downloadResume()">Download Resume PDF ↓</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="soft reveal">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">09 / Contact</div><h2 class="section-title">Let’s connect</h2><p class="section-desc">Feel free to reach out for learning opportunities, collaboration, or professional connections.</p></div>
+      <div class="contact-grid">
+        <a class="contact-card" href="tel:+917984862594"><span class="contact-icon">☎</span><span><small>Phone</small><strong>+91 79848 62594</strong></span></a>
+        <a class="contact-card" href="mailto:jeetkotecha09@gmail.com"><span class="contact-icon">✉</span><span><small>Email</small><strong>jeetkotecha09@gmail.com</strong></span></a>
+      </div>
+      <div class="social-row">
+        <a class="btn light" href="https://www.instagram.com/jeet__14_33/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a class="btn light" href="https://wa.me/917984862594" target="_blank" rel="noopener">WhatsApp ↗</a>
+        <a class="btn light" href="mailto:jeetkotecha09@gmail.com">Email Me ↗</a>
+      </div>
+      <p class="note">LinkedIn profile has not been added yet.</p>
+    </div>
+  </section>
 </main>
 
-<footer>
-  <div class="container">
-    <p>
-      &copy; <span id="year"></span> Kotecha Jeet Pareshbhai.
-      All rights reserved.
-    </p>
-    <p>Personal Portfolio | Learning • Experience • Growth</p>
-  </div>
-</footer>
+<footer class="no-print"><div class="wrap footer-inner"><span>© <span id="year"></span> Jeet Kotecha</span><span>Designed with purpose • Built for growth</span></div></footer>
+
+<div id="printResume">
+  <h1>JEET KOTECHA</h1>
+  <p class="print-muted">B.Voc Food & Agro Processing Student | Lokbharati University for Rural Innovation</p>
+  <p>Phone: +91 79848 62594 | Email: jeetkotecha09@gmail.com | Instagram: @jeet__14_33</p>
+  <h2>PROFILE</h2>
+  <p>Food & Agro Processing student interested in practical learning, food processing, quality control exposure, agro-based innovation, and industry experience.</p>
+  <h2>EDUCATION</h2>
+  <ul><li>B.Voc Food & Agro Processing — Second Year, Lokbharati University for Rural Innovation.</li><li>11th & 12th Science — Alpha School, Mendarda.</li></ul>
+  <h2>INTERNSHIP EXPERIENCE</h2>
+  <ul>
+    <li>Vadrad, Banaskantha — Canning area exposure.</li>
+    <li>Kukma — Non-food product exposure.</li>
+    <li>Gopal Snacks Limited, Rajkot — Quality Control (QC) Department.</li>
+    <li>Gopal Dairy, Rajkot — Crate Department, In-Out Report, Computer Department, and Selling Department.</li>
+  </ul>
+  <h2>PROJECT</h2>
+  <p>Adjustable Fruit-Picking Tool with Collection Basket — a rural innovation concept with an adjustable-length tool, top cutter, and collection basket to help prevent harvested fruit from falling. Survey location: Aambla.</p>
+  <h2>SKILLS & INTERESTS</h2>
+  <p>Food processing learning • Quality control exposure • Computer and digital learning • Teamwork • Communication • Cricket • Tabla • Reading • Writing • Stock market learning</p>
+  <h2>LANGUAGES</h2>
+  <p>Gujarati • Hindi • English</p>
+</div>
 
 <script>
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-</script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{
+  const open=navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',String(open));
+  menuBtn.textContent=open?'✕':'☰';
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+  menuBtn.textContent='☰';
+}));
+document.getElementById('year').textContent=new Date().getFullYear();
 
+const photo=document.getElementById('profilePhoto');
+photo.addEventListener('load',()=>{photo.style.display='block';document.getElementById('avatarInitials').style.display='none';});
+photo.addEventListener('error',()=>{photo.style.display='none';document.getElementById('avatarInitials').style.display='block';});
+
+function downloadResume(){window.print();}
+
+const revealItems=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver((entries,obs)=>{
+    entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target);}});
+  },{threshold:.1});
+  revealItems.forEach(item=>observer.observe(item));
+}else{revealItems.forEach(item=>item.classList.add('visible'));}
+
+const sections=[...document.querySelectorAll('main section[id]')];
+if('IntersectionObserver' in window){
+  const navObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        navLinks.querySelectorAll('a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));
+      }
+    });
+  },{rootMargin:'-35% 0px -55% 0px'});
+  sections.forEach(section=>navObserver.observe(section));
+}
+</script>
 </body>
 </html>
