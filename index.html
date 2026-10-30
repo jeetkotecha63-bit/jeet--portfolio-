@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +34,7 @@ body {
 }
 
 header {
-  background: rgba(255,255,255,0.96);
+  background: white;
   box-shadow: 0 3px 15px rgba(0,0,0,0.07);
   position: sticky;
   top: 0;
@@ -47,7 +48,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
 }
 
 .logo {
@@ -88,6 +88,8 @@ nav {
   cursor: pointer;
 }
 
+/* HOME SECTION */
+
 .hero {
   min-height: 85vh;
   padding: 75px 8%;
@@ -102,7 +104,7 @@ nav {
   max-width: 650px;
 }
 
-.hero-content .small-title {
+.small-title {
   color: var(--blue);
   font-weight: bold;
   letter-spacing: 2px;
@@ -126,22 +128,18 @@ nav {
   margin-bottom: 25px;
 }
 
-/* PROFILE PHOTO */
-.profile-circle {
-  width: 280px;
-  height: 280px;
-  min-width: 280px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 10px solid white;
-  box-shadow: 0 15px 45px rgba(25,118,210,0.2);
-  background: linear-gradient(135deg, var(--navy), var(--blue));
-}
+/* PROFILE PHOTO - KEEP profile.png IN SAME FOLDER */
 
-.profile-circle img {
-  width: 100%;
-  height: 100%;
+.profile-photo {
+  width: 330px;
+  height: 420px;
+  min-width: 280px;
   object-fit: cover;
+  object-position: center 25%;
+  border-radius: 18px;
+  border: 7px solid white;
+  box-shadow: 0 15px 45px rgba(25,118,210,0.18);
+  background: #eaf5ff;
   display: block;
 }
 
@@ -187,7 +185,7 @@ section {
   color: var(--muted);
 }
 
-.section-title .line {
+.line {
   width: 65px;
   height: 4px;
   background: var(--blue);
@@ -316,6 +314,8 @@ footer {
   font-size: 14px;
 }
 
+/* MOBILE RESPONSIVE */
+
 @media(max-width: 800px) {
   .menu-btn {
     display: block;
@@ -344,10 +344,10 @@ footer {
     gap: 30px;
   }
 
-  .profile-circle {
-    width: 200px;
-    height: 200px;
-    min-width: 200px;
+  .profile-photo {
+    width: 250px;
+    height: 320px;
+    min-width: 250px;
   }
 
   section {
@@ -414,10 +414,12 @@ footer {
     <a href="#contact" class="btn btn-outline">Contact Me</a>
   </div>
 
-  <!-- YOUR PROFILE PHOTO -->
-  <div class="profile-circle">
-    <img src="jeet.jpg" alt="Jeet Kotecha">
-  </div>
+  <!-- PROFILE PHOTO -->
+  <img
+    src="./profile.png"
+    alt="Jeet Kotecha"
+    class="profile-photo"
+  >
 
 </section>
 
@@ -747,7 +749,6 @@ footer {
     </div>
 
     <div class="contact-box">
-
       <h3>Get In Touch</h3>
 
       <p>
@@ -780,8 +781,8 @@ footer {
         I am always interested in learning, sharing ideas
         and connecting with new people.
       </p>
-
     </div>
+
   </div>
 </section>
 
