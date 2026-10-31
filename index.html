@@ -2,6 +2,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,7 +89,7 @@ nav {
   cursor: pointer;
 }
 
-/* HOME SECTION */
+/* HOME */
 
 .hero {
   min-height: 85vh;
@@ -128,18 +129,16 @@ nav {
   margin-bottom: 25px;
 }
 
-/* PROFILE PHOTO - KEEP profile.png IN SAME FOLDER */
-
+/* PROFILE PHOTO */
 .profile-photo {
   width: 330px;
   height: 420px;
   min-width: 280px;
   object-fit: cover;
   object-position: center 25%;
-  border-radius: 18px;
-  border: 7px solid white;
+  border-radius: 16px;
+  border: 6px solid white;
   box-shadow: 0 15px 45px rgba(25,118,210,0.18);
-  background: #eaf5ff;
   display: block;
 }
 
@@ -171,6 +170,11 @@ section {
   scroll-margin-top: 75px;
 }
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
 .section-title {
   text-align: center;
   margin-bottom: 40px;
@@ -191,11 +195,6 @@ section {
   background: var(--blue);
   margin: 12px auto;
   border-radius: 5px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
 }
 
 .about-box {
@@ -226,7 +225,6 @@ section {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(25,118,210,0.12);
 }
 
 .card h3 {
@@ -283,6 +281,39 @@ section {
   font-weight: bold;
 }
 
+/* PHOTO GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.gallery-card {
+  background: white;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card h3 {
+  color: var(--navy);
+  padding: 13px 15px 2px;
+}
+
+.gallery-card p {
+  color: var(--muted);
+  padding: 0 15px 15px;
+  font-size: 14px;
+}
+
 .contact-box {
   background: var(--navy);
   color: white;
@@ -314,7 +345,7 @@ footer {
   font-size: 14px;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 
 @media(max-width: 800px) {
   .menu-btn {
@@ -363,14 +394,6 @@ footer {
   header, footer, .btn {
     display: none !important;
   }
-
-  body {
-    background: white;
-  }
-
-  section {
-    padding: 20px;
-  }
 }
 </style>
 </head>
@@ -378,22 +401,23 @@ footer {
 <body>
 
 <header>
-  <nav>
-    <div class="logo">JK<span>.</span></div>
+<nav>
+  <div class="logo">JK<span>.</span></div>
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-    <div class="nav-links" id="navLinks">
-      <a href="#home" onclick="closeMenu()">Home</a>
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#education" onclick="closeMenu()">Education</a>
-      <a href="#internships" onclick="closeMenu()">Internships</a>
-      <a href="#skills" onclick="closeMenu()">Skills</a>
-      <a href="#projects" onclick="closeMenu()">Projects</a>
-      <a href="#hobbies" onclick="closeMenu()">Hobbies</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
-    </div>
-  </nav>
+  <div class="nav-links" id="navLinks">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#education" onclick="closeMenu()">Education</a>
+    <a href="#internships" onclick="closeMenu()">Internships</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#projects" onclick="closeMenu()">Projects</a>
+    <a href="#gallery" onclick="closeMenu()">Gallery</a>
+    <a href="#hobbies" onclick="closeMenu()">Hobbies</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </div>
+</nav>
 </header>
 
 <!-- HOME -->
@@ -414,9 +438,9 @@ footer {
     <a href="#contact" class="btn btn-outline">Contact Me</a>
   </div>
 
-  <!-- PROFILE PHOTO -->
+  <!-- IMPORTANT: Exact GitHub filename -->
   <img
-    src="./profile.png"
+    src="./profile.png.png"
     alt="Jeet Kotecha"
     class="profile-photo"
   >
@@ -425,365 +449,377 @@ footer {
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>About Me</h2>
-      <div class="line"></div>
-      <p>Know more about me</p>
-    </div>
-
-    <div class="about-box">
-      <p>
-        My name is Jeet Kotecha. I am a Second Year student of
-        B.Voc Food & Agro Processing at Lokbharati University
-        for Rural Innovation.
-      </p>
-
-      <p>
-        I believe in learning through practical work, field visits,
-        internships and new experiences. I am interested in food
-        processing, quality control, agriculture and technology.
-      </p>
-
-      <p>
-        My aim is to improve my knowledge, develop new skills and
-        use my learning in real-life situations.
-      </p>
-    </div>
-
+  <div class="section-title">
+    <h2>About Me</h2>
+    <div class="line"></div>
+    <p>Know more about me</p>
   </div>
+
+  <div class="about-box">
+    <p>
+      My name is Jeet Kotecha. I am a Second Year student of
+      B.Voc Food & Agro Processing at Lokbharati University
+      for Rural Innovation.
+    </p>
+
+    <p>
+      I believe in learning through practical work, field visits,
+      internships and new experiences. I am interested in food
+      processing, quality control, agriculture and technology.
+    </p>
+
+    <p>
+      My aim is to improve my knowledge, develop new skills and
+      use my learning in real-life situations.
+    </p>
+  </div>
+
+</div>
 </section>
 
 <!-- EDUCATION -->
 <section class="alt-section" id="education">
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>Education</h2>
-      <div class="line"></div>
-      <p>My academic journey</p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="icon">🎓</div>
-        <h3>B.Voc Food & Agro Processing</h3>
-        <p>Second Year</p>
-        <p>Lokbharati University for Rural Innovation</p>
-        <span class="tag">Currently Studying</span>
-      </div>
-
-      <div class="card">
-        <div class="icon">📚</div>
-        <h3>Higher Secondary Education</h3>
-        <p>11th & 12th Science</p>
-        <p>Alpha School, Mendarda</p>
-        <span class="tag">Science Stream</span>
-      </div>
-
-    </div>
+  <div class="section-title">
+    <h2>Education</h2>
+    <div class="line"></div>
+    <p>My academic journey</p>
   </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🎓</div>
+      <h3>B.Voc Food & Agro Processing</h3>
+      <p>Second Year</p>
+      <p>Lokbharati University for Rural Innovation</p>
+      <span class="tag">Currently Studying</span>
+    </div>
+
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>Higher Secondary Education</h3>
+      <p>11th & 12th Science</p>
+      <p>Alpha School, Mendarda</p>
+      <span class="tag">Science Stream</span>
+    </div>
+
+  </div>
+</div>
 </section>
 
 <!-- INTERNSHIPS -->
 <section id="internships">
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>Internship Experience</h2>
-      <div class="line"></div>
-      <p>Learning through practical experience</p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="internship-number">INTERNSHIP 01</div>
-        <div class="icon">🥫</div>
-        <h3>Vadrad, Banaskantha</h3>
-        <p><b>Department:</b> Food Processing</p>
-        <p><b>Work:</b> Canning</p>
-        <p>
-          Learned about the basic process of canning,
-          food preservation and practical food processing activities.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="internship-number">INTERNSHIP 02</div>
-        <div class="icon">🧪</div>
-        <h3>Kukma</h3>
-        <p><b>Work:</b> Non-Food Product</p>
-        <p>
-          Gained practical exposure to non-food product preparation
-          and learned about production activities.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="internship-number">INTERNSHIP 03</div>
-        <div class="icon">🏭</div>
-        <h3>Gopal Snacks Limited</h3>
-        <p><b>Location:</b> Rajkot</p>
-        <p><b>Department:</b> Quality Control (QC)</p>
-        <p>
-          Observed quality control activities and learned about
-          quality checking in the food industry.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="internship-number">INTERNSHIP 04</div>
-        <div class="icon">🥛</div>
-        <h3>Gopal Dairy</h3>
-        <p><b>Location:</b> Rajkot</p>
-        <p><b>Departments & Activities:</b></p>
-
-        <ul style="padding-left:20px; color:#62778a; margin-top:8px;">
-          <li>Crate Department</li>
-          <li>In-Out Report</li>
-          <li>Computer Department</li>
-          <li>Selling Department</li>
-        </ul>
-
-        <p style="margin-top:10px;">
-          Gained practical exposure to different departmental
-          activities and workplace operations.
-        </p>
-      </div>
-
-    </div>
+  <div class="section-title">
+    <h2>Internship Experience</h2>
+    <div class="line"></div>
+    <p>Learning through practical experience</p>
   </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="internship-number">INTERNSHIP 01</div>
+      <div class="icon">🥫</div>
+      <h3>Vadrad, Banaskantha</h3>
+      <p><b>Work:</b> Canning</p>
+      <p>Learned about canning, food preservation and practical food processing.</p>
+    </div>
+
+    <div class="card">
+      <div class="internship-number">INTERNSHIP 02</div>
+      <div class="icon">🧪</div>
+      <h3>Kukma</h3>
+      <p><b>Work:</b> Non-Food Product</p>
+      <p>Gained practical exposure to non-food product preparation and production activities.</p>
+    </div>
+
+    <div class="card">
+      <div class="internship-number">INTERNSHIP 03</div>
+      <div class="icon">🏭</div>
+      <h3>Gopal Snacks Limited</h3>
+      <p><b>Location:</b> Rajkot</p>
+      <p><b>Department:</b> Quality Control (QC)</p>
+      <p>Observed quality control activities and quality checking in the food industry.</p>
+    </div>
+
+    <div class="card">
+      <div class="internship-number">INTERNSHIP 04</div>
+      <div class="icon">🥛</div>
+      <h3>Gopal Dairy</h3>
+      <p><b>Location:</b> Rajkot</p>
+      <p><b>Departments & Activities:</b></p>
+      <ul style="padding-left:20px;color:#62778a;">
+        <li>Crate Department</li>
+        <li>In-Out Report</li>
+        <li>Computer Department</li>
+        <li>Selling Department</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
 </section>
 
 <!-- SKILLS -->
 <section class="alt-section" id="skills">
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>My Skills</h2>
-      <div class="line"></div>
-      <p>Knowledge and abilities I am developing</p>
-    </div>
-
-    <div class="skills-list">
-      <div class="skill">Food Processing</div>
-      <div class="skill">Quality Control Basics</div>
-      <div class="skill">Canning</div>
-      <div class="skill">Computer Knowledge</div>
-      <div class="skill">Data Entry</div>
-      <div class="skill">Communication</div>
-      <div class="skill">Teamwork</div>
-      <div class="skill">Practical Learning</div>
-      <div class="skill">Problem Solving</div>
-      <div class="skill">Creative Thinking</div>
-    </div>
-
+  <div class="section-title">
+    <h2>My Skills</h2>
+    <div class="line"></div>
+    <p>Knowledge and abilities I am developing</p>
   </div>
+
+  <div class="skills-list">
+    <div class="skill">Food Processing</div>
+    <div class="skill">Quality Control Basics</div>
+    <div class="skill">Canning</div>
+    <div class="skill">Computer Knowledge</div>
+    <div class="skill">Data Entry</div>
+    <div class="skill">Communication</div>
+    <div class="skill">Teamwork</div>
+    <div class="skill">Practical Learning</div>
+    <div class="skill">Problem Solving</div>
+    <div class="skill">Creative Thinking</div>
+  </div>
+
+</div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
-      <h2>My Projects</h2>
-      <div class="line"></div>
-      <p>Ideas and practical learning</p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="icon">🍎</div>
-        <h3>Adjustable Fruit Picking Tool</h3>
-        <p>
-          A length-adjustable fruit picking tool designed with
-          a cutter at the top and a collection basket below.
-          It helps collect fruits safely and reduces damage
-          caused by falling fruits.
-        </p>
-        <span class="tag">Rural Innovation</span>
-        <span class="tag">Agriculture</span>
-      </div>
-
-      <div class="card">
-        <div class="icon">🌱</div>
-        <h3>Agro & Food Processing Learning</h3>
-        <p>
-          Learning about food processing, preservation,
-          quality control, agricultural practices and
-          different production activities through practical work.
-        </p>
-        <span class="tag">Food Processing</span>
-        <span class="tag">Practical Learning</span>
-      </div>
-
-    </div>
+  <div class="section-title">
+    <h2>My Projects</h2>
+    <div class="line"></div>
+    <p>Ideas and practical learning</p>
   </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🍎</div>
+      <h3>Adjustable Fruit Picking Tool</h3>
+      <p>
+        A length-adjustable fruit picking tool designed with a cutter
+        at the top and a collection basket below. It helps collect
+        fruits safely and reduces damage caused by falling fruits.
+      </p>
+      <span class="tag">Rural Innovation</span>
+      <span class="tag">Agriculture</span>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>Agro & Food Processing Learning</h3>
+      <p>
+        Learning about food processing, preservation, quality control,
+        agricultural practices and production activities through practical work.
+      </p>
+      <span class="tag">Food Processing</span>
+      <span class="tag">Practical Learning</span>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="alt-section" id="gallery">
+<div class="container">
+
+  <div class="section-title">
+    <h2>My Photo Gallery</h2>
+    <div class="line"></div>
+    <p>Memories of my learning and internship journey</p>
+  </div>
+
+  <div class="gallery">
+
+    <div class="gallery-card">
+      <img src="./vadrad%20photoes.jpeg" alt="Vadrad Internship" loading="lazy">
+      <h3>Vadrad Internship</h3>
+      <p>Practical learning at Vadrad, Banaskantha</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="./kukma%20kaam.jpeg" alt="Kukma Internship" loading="lazy">
+      <h3>Kukma Internship</h3>
+      <p>Learning and practical activities</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="./kukma%20kaam%202.jpeg" alt="Kukma Practical Work" loading="lazy">
+      <h3>Kukma Practical Work</h3>
+      <p>Experience during internship</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="./kukma%20certificate.jpeg" alt="Kukma Certificate" loading="lazy">
+      <h3>Internship Certificate</h3>
+      <p>Certificate and achievement</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="./jeet%20photoes.jpeg" alt="Jeet Kotecha" loading="lazy">
+      <h3>My Memories</h3>
+      <p>Personal portfolio photographs</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="./jeet%20pic.jpeg" alt="Jeet Kotecha" loading="lazy">
+      <h3>My Photograph</h3>
+      <p>Personal portfolio</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="./exelance%20kaam.jpeg" alt="Excellence Work" loading="lazy">
+      <h3>Practical Work</h3>
+      <p>Learning through activities</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="./jeet.jpg.png" alt="Jeet Kotecha Photo" loading="lazy">
+      <h3>My Photo</h3>
+      <p>Personal collection</p>
+    </div>
+
+  </div>
+</div>
 </section>
 
 <!-- LEARNING JOURNEY -->
-<section class="alt-section" id="journey">
-  <div class="container">
+<section id="journey">
+<div class="container">
 
-    <div class="section-title">
-      <h2>My Learning Journey</h2>
-      <div class="line"></div>
-      <p>Every experience teaches something new</p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="icon">🏫</div>
-        <h3>College Learning</h3>
-        <p>
-          Learning through classroom sessions,
-          assignments and practical activities.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🏭</div>
-        <h3>Industrial Exposure</h3>
-        <p>
-          Understanding real workplace activities
-          through internships and visits.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">💻</div>
-        <h3>Digital Learning</h3>
-        <p>
-          Developing computer knowledge and learning
-          new digital tools and technologies.
-        </p>
-      </div>
-
-    </div>
+  <div class="section-title">
+    <h2>My Learning Journey</h2>
+    <div class="line"></div>
+    <p>Every experience teaches something new</p>
   </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🏫</div>
+      <h3>College Learning</h3>
+      <p>Learning through classroom sessions, assignments and practical activities.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏭</div>
+      <h3>Industrial Exposure</h3>
+      <p>Understanding real workplace activities through internships and visits.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>Digital Learning</h3>
+      <p>Developing computer knowledge and learning new digital tools and technologies.</p>
+    </div>
+
+  </div>
+</div>
 </section>
 
 <!-- HOBBIES -->
-<section id="hobbies">
-  <div class="container">
+<section class="alt-section" id="hobbies">
+<div class="container">
 
-    <div class="section-title">
-      <h2>My Hobbies & Interests</h2>
-      <div class="line"></div>
-      <p>Things I enjoy doing</p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="icon">🏏</div>
-        <h3>Cricket</h3>
-        <p>
-          I enjoy playing cricket and learning teamwork,
-          discipline and sportsmanship.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📖</div>
-        <h3>Reading & Writing</h3>
-        <p>
-          I enjoy reading, writing and expressing
-          ideas through words.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🥁</div>
-        <h3>Tabla</h3>
-        <p>
-          I enjoy music and learning through
-          rhythm and practice.
-        </p>
-      </div>
-
-    </div>
+  <div class="section-title">
+    <h2>My Hobbies & Interests</h2>
+    <div class="line"></div>
+    <p>Things I enjoy doing</p>
   </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🏏</div>
+      <h3>Cricket</h3>
+      <p>I enjoy playing cricket and learning teamwork, discipline and sportsmanship.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📖</div>
+      <h3>Reading & Writing</h3>
+      <p>I enjoy reading, writing and expressing ideas through words.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🥁</div>
+      <h3>Tabla</h3>
+      <p>I enjoy music and learning through rhythm and practice.</p>
+    </div>
+
+  </div>
+</div>
 </section>
 
 <!-- RESUME -->
-<section class="alt-section" id="resume">
-  <div class="container">
+<section id="resume">
+<div class="container">
 
-    <div class="section-title">
-      <h2>My Resume</h2>
-      <div class="line"></div>
-      <p>My academic and practical profile</p>
-    </div>
-
-    <div class="about-box" style="text-align:center;">
-      <h3 style="color:#102a43;">Jeet Kotecha</h3>
-      <p>B.Voc Food & Agro Processing | Second Year</p>
-      <p>Lokbharati University for Rural Innovation</p>
-      <p>
-        Internship experience in food processing,
-        QC and dairy operations.
-      </p>
-
-      <button class="btn" onclick="window.print()">
-        Print / Save Resume
-      </button>
-    </div>
-
+  <div class="section-title">
+    <h2>My Resume</h2>
+    <div class="line"></div>
+    <p>My academic and practical profile</p>
   </div>
+
+  <div class="about-box" style="text-align:center;">
+    <h3 style="color:#102a43;">Jeet Kotecha</h3>
+    <p>B.Voc Food & Agro Processing | Second Year</p>
+    <p>Lokbharati University for Rural Innovation</p>
+    <p>Internship experience in food processing, QC and dairy operations.</p>
+
+    <button class="btn" onclick="window.print()">Print / Save Resume</button>
+  </div>
+
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="container">
+<section class="alt-section" id="contact">
+<div class="container">
 
-    <div class="section-title">
-      <h2>Contact Me</h2>
-      <div class="line"></div>
-      <p>Let's connect</p>
-    </div>
-
-    <div class="contact-box">
-      <h3>Get In Touch</h3>
-
-      <p>
-        📱 Mobile:
-        <a href="tel:+917984862594">+91 79848 62594</a>
-      </p>
-
-      <p>
-        ✉️ Email:
-        <a href="mailto:jeetkotecha09@gmail.com">
-          jeetkotecha09@gmail.com
-        </a>
-      </p>
-
-      <p>
-        📷 Instagram:
-        <a href="https://www.instagram.com/jeet__14_33/" target="_blank">
-          @jeet__14_33
-        </a>
-      </p>
-
-      <p>
-        💬 WhatsApp:
-        <a href="https://wa.me/917984862594" target="_blank">
-          Chat with me
-        </a>
-      </p>
-
-      <p style="margin-top:20px;">
-        I am always interested in learning, sharing ideas
-        and connecting with new people.
-      </p>
-    </div>
-
+  <div class="section-title">
+    <h2>Contact Me</h2>
+    <div class="line"></div>
+    <p>Let's connect</p>
   </div>
+
+  <div class="contact-box">
+    <h3>Get In Touch</h3>
+
+    <p>📱 Mobile:
+      <a href="tel:+917984862594">+91 79848 62594</a>
+    </p>
+
+    <p>✉️ Email:
+      <a href="mailto:jeetkotecha09@gmail.com">jeetkotecha09@gmail.com</a>
+    </p>
+
+    <p>📷 Instagram:
+      <a href="https://www.instagram.com/jeet__14_33/" target="_blank">@jeet__14_33</a>
+    </p>
+
+    <p>💬 WhatsApp:
+      <a href="https://wa.me/917984862594" target="_blank">Chat with me</a>
+    </p>
+
+    <p style="margin-top:20px;">
+      I am always interested in learning, sharing ideas and connecting with new people.
+    </p>
+  </div>
+
+</div>
 </section>
 
 <footer>
