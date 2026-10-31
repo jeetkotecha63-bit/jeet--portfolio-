@@ -4,6 +4,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,7 +129,6 @@ nav {
   margin-bottom: 25px;
 }
 
-/* MAIN PROFILE PHOTO */
 .profile-photo {
   width: 330px;
   height: 420px;
@@ -312,6 +312,42 @@ section {
   font-size: 14px;
 }
 
+/* CREATIVE CORNER */
+.creative-card {
+  background: white;
+  padding: 28px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--blue);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.creative-card:hover {
+  transform: translateY(-6px);
+}
+
+.creative-card .icon {
+  font-size: 38px;
+}
+
+.creative-card h3 {
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.creative-card p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.creative-card .btn {
+  margin-top: auto;
+}
+
 .contact-box {
   background: var(--navy);
   color: white;
@@ -410,6 +446,7 @@ footer {
     <a href="#skills" onclick="closeMenu()">Skills</a>
     <a href="#projects" onclick="closeMenu()">Projects</a>
     <a href="#gallery" onclick="closeMenu()">Gallery</a>
+    <a href="#creative" onclick="closeMenu()">Creative Corner</a>
     <a href="#hobbies" onclick="closeMenu()">Hobbies</a>
     <a href="#resume" onclick="closeMenu()">Resume</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
@@ -433,7 +470,6 @@ footer {
     <a href="#contact" class="btn btn-outline">Contact Me</a>
   </div>
 
-  <!-- Main Profile Photo -->
   <img
     src="./profile.png.png"
     alt="Jeet Kotecha"
@@ -610,7 +646,7 @@ footer {
 </div>
 </section>
 
-<!-- GALLERY: ONLY FOUR INTERNSHIP PHOTOS RETAINED -->
+<!-- GALLERY -->
 <section class="alt-section" id="gallery">
 <div class="container">
   <div class="section-title">
@@ -680,6 +716,70 @@ footer {
       <h3>Digital Learning</h3>
       <p>Developing computer knowledge and learning new digital tools and technologies.</p>
     </div>
+  </div>
+</div>
+</section>
+
+<!-- CREATIVE CORNER -->
+<section class="alt-section" id="creative">
+<div class="container">
+  <div class="section-title">
+    <h2>Creative Corner</h2>
+    <div class="line"></div>
+    <p>My workshop activities, project documents and creative work</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- WORKSHOP VIDEO -->
+    <div class="creative-card">
+      <div class="icon">🎥</div>
+      <h3>Workshop Video</h3>
+      <p>
+        Rural Innovation Workshop – Project Journey.
+        A video presentation of the workshop activities,
+        project development and practical learning experience.
+      </p>
+      <span class="tag">Workshop</span>
+      <span class="tag">Video</span>
+      <a href="./workshop-video.mp4" class="btn" target="_blank">
+        Watch Workshop Video
+      </a>
+    </div>
+
+    <!-- PROJECT PROPOSAL -->
+    <div class="creative-card">
+      <div class="icon">📄</div>
+      <h3>Project Proposal</h3>
+      <p>
+        Adjustable Fruit Picking Tool & Collection Basket –
+        Project Proposal. A document explaining the project idea,
+        purpose, design and proposed working method.
+      </p>
+      <span class="tag">Project</span>
+      <span class="tag">Proposal</span>
+      <a href="./project-proposal.pdf" class="btn" target="_blank">
+        View Project Proposal
+      </a>
+    </div>
+
+    <!-- WORKSHOP REPORT -->
+    <div class="creative-card">
+      <div class="icon">📘</div>
+      <h3>Workshop Report</h3>
+      <p>
+        Rural Innovation Workshop – Field Survey & Project Report.
+        Group No. 15 | Mentor: Sandipbhai Chauhan.
+        Survey: Aambla, Taluka Sihor, District Bhavnagar.
+        Team Members: 5 | Model Cost: ₹1,500.
+      </p>
+      <span class="tag">Field Survey</span>
+      <span class="tag">Workshop Report</span>
+      <a href="./workshop-report.pdf" class="btn" target="_blank">
+        View Workshop Report
+      </a>
+    </div>
+
   </div>
 </div>
 </section>
