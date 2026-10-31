@@ -3,6 +3,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,8 +90,6 @@ nav {
   cursor: pointer;
 }
 
-/* HOME */
-
 .hero {
   min-height: 85vh;
   padding: 75px 8%;
@@ -129,7 +128,7 @@ nav {
   margin-bottom: 25px;
 }
 
-/* PROFILE PHOTO */
+/* MAIN PROFILE PHOTO */
 .profile-photo {
   width: 330px;
   height: 420px;
@@ -282,7 +281,6 @@ section {
 }
 
 /* PHOTO GALLERY */
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -344,8 +342,6 @@ footer {
   color: white;
   font-size: 14px;
 }
-
-/* MOBILE */
 
 @media(max-width: 800px) {
   .menu-btn {
@@ -415,6 +411,7 @@ footer {
     <a href="#projects" onclick="closeMenu()">Projects</a>
     <a href="#gallery" onclick="closeMenu()">Gallery</a>
     <a href="#hobbies" onclick="closeMenu()">Hobbies</a>
+    <a href="#resume" onclick="closeMenu()">Resume</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
 </nav>
@@ -422,10 +419,8 @@ footer {
 
 <!-- HOME -->
 <section class="hero" id="home">
-
   <div class="hero-content">
     <div class="small-title">Welcome to my Portfolio</div>
-
     <h1>Hello, I'm <span>Jeet Kotecha</span></h1>
 
     <p>
@@ -438,19 +433,17 @@ footer {
     <a href="#contact" class="btn btn-outline">Contact Me</a>
   </div>
 
-  <!-- IMPORTANT: Exact GitHub filename -->
+  <!-- Main Profile Photo -->
   <img
     src="./profile.png.png"
     alt="Jeet Kotecha"
     class="profile-photo"
   >
-
 </section>
 
 <!-- ABOUT -->
 <section id="about">
 <div class="container">
-
   <div class="section-title">
     <h2>About Me</h2>
     <div class="line"></div>
@@ -463,26 +456,22 @@ footer {
       B.Voc Food & Agro Processing at Lokbharati University
       for Rural Innovation.
     </p>
-
     <p>
       I believe in learning through practical work, field visits,
       internships and new experiences. I am interested in food
       processing, quality control, agriculture and technology.
     </p>
-
     <p>
       My aim is to improve my knowledge, develop new skills and
       use my learning in real-life situations.
     </p>
   </div>
-
 </div>
 </section>
 
 <!-- EDUCATION -->
 <section class="alt-section" id="education">
 <div class="container">
-
   <div class="section-title">
     <h2>Education</h2>
     <div class="line"></div>
@@ -490,7 +479,6 @@ footer {
   </div>
 
   <div class="grid">
-
     <div class="card">
       <div class="icon">🎓</div>
       <h3>B.Voc Food & Agro Processing</h3>
@@ -506,7 +494,6 @@ footer {
       <p>Alpha School, Mendarda</p>
       <span class="tag">Science Stream</span>
     </div>
-
   </div>
 </div>
 </section>
@@ -514,7 +501,6 @@ footer {
 <!-- INTERNSHIPS -->
 <section id="internships">
 <div class="container">
-
   <div class="section-title">
     <h2>Internship Experience</h2>
     <div class="line"></div>
@@ -522,7 +508,6 @@ footer {
   </div>
 
   <div class="grid">
-
     <div class="card">
       <div class="internship-number">INTERNSHIP 01</div>
       <div class="icon">🥫</div>
@@ -561,7 +546,6 @@ footer {
         <li>Selling Department</li>
       </ul>
     </div>
-
   </div>
 </div>
 </section>
@@ -569,7 +553,6 @@ footer {
 <!-- SKILLS -->
 <section class="alt-section" id="skills">
 <div class="container">
-
   <div class="section-title">
     <h2>My Skills</h2>
     <div class="line"></div>
@@ -588,14 +571,12 @@ footer {
     <div class="skill">Problem Solving</div>
     <div class="skill">Creative Thinking</div>
   </div>
-
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
 <div class="container">
-
   <div class="section-title">
     <h2>My Projects</h2>
     <div class="line"></div>
@@ -603,7 +584,6 @@ footer {
   </div>
 
   <div class="grid">
-
     <div class="card">
       <div class="icon">🍎</div>
       <h3>Adjustable Fruit Picking Tool</h3>
@@ -626,69 +606,47 @@ footer {
       <span class="tag">Food Processing</span>
       <span class="tag">Practical Learning</span>
     </div>
-
   </div>
 </div>
 </section>
 
-<!-- PHOTO GALLERY -->
+<!-- GALLERY: ONLY FOUR INTERNSHIP PHOTOS RETAINED -->
 <section class="alt-section" id="gallery">
 <div class="container">
-
   <div class="section-title">
-    <h2>My Photo Gallery</h2>
+    <h2>My Internship Gallery</h2>
     <div class="line"></div>
-    <p>Memories of my learning and internship journey</p>
+    <p>Memories of my practical learning journey</p>
   </div>
 
   <div class="gallery">
 
     <div class="gallery-card">
-      <img src="./vadrad%20photoes.jpeg" alt="Vadrad Internship" loading="lazy">
+      <img src="./vadrad%20photoes.jpeg"
+           alt="Vadrad Internship" loading="lazy">
       <h3>Vadrad Internship</h3>
       <p>Practical learning at Vadrad, Banaskantha</p>
     </div>
 
     <div class="gallery-card">
-      <img src="./kukma%20kaam.jpeg" alt="Kukma Internship" loading="lazy">
+      <img src="./kukma%20kaam.jpeg"
+           alt="Kukma Internship" loading="lazy">
       <h3>Kukma Internship</h3>
       <p>Learning and practical activities</p>
     </div>
 
     <div class="gallery-card">
-      <img src="./kukma%20kaam%202.jpeg" alt="Kukma Practical Work" loading="lazy">
+      <img src="./kukma%20kaam%202.jpeg"
+           alt="Kukma Practical Work" loading="lazy">
       <h3>Kukma Practical Work</h3>
       <p>Experience during internship</p>
     </div>
 
     <div class="gallery-card">
-      <img src="./kukma%20certificate.jpeg" alt="Kukma Certificate" loading="lazy">
+      <img src="./kukma%20certificate.jpeg"
+           alt="Kukma Certificate" loading="lazy">
       <h3>Internship Certificate</h3>
       <p>Certificate and achievement</p>
-    </div>
-
-    <div class="gallery-card">
-      <img src="./jeet%20photoes.jpeg" alt="Jeet Kotecha" loading="lazy">
-      <h3>My Memories</h3>
-      <p>Personal portfolio photographs</p>
-    </div>
-
-    <div class="gallery-card">
-      <img src="./jeet%20pic.jpeg" alt="Jeet Kotecha" loading="lazy">
-      <h3>My Photograph</h3>
-      <p>Personal portfolio</p>
-    </div>
-
-    <div class="gallery-card">
-      <img src="./exelance%20kaam.jpeg" alt="Excellence Work" loading="lazy">
-      <h3>Practical Work</h3>
-      <p>Learning through activities</p>
-    </div>
-
-    <div class="gallery-card">
-      <img src="./jeet.jpg.png" alt="Jeet Kotecha Photo" loading="lazy">
-      <h3>My Photo</h3>
-      <p>Personal collection</p>
     </div>
 
   </div>
@@ -698,7 +656,6 @@ footer {
 <!-- LEARNING JOURNEY -->
 <section id="journey">
 <div class="container">
-
   <div class="section-title">
     <h2>My Learning Journey</h2>
     <div class="line"></div>
@@ -706,7 +663,6 @@ footer {
   </div>
 
   <div class="grid">
-
     <div class="card">
       <div class="icon">🏫</div>
       <h3>College Learning</h3>
@@ -724,7 +680,6 @@ footer {
       <h3>Digital Learning</h3>
       <p>Developing computer knowledge and learning new digital tools and technologies.</p>
     </div>
-
   </div>
 </div>
 </section>
@@ -732,7 +687,6 @@ footer {
 <!-- HOBBIES -->
 <section class="alt-section" id="hobbies">
 <div class="container">
-
   <div class="section-title">
     <h2>My Hobbies & Interests</h2>
     <div class="line"></div>
@@ -740,7 +694,6 @@ footer {
   </div>
 
   <div class="grid">
-
     <div class="card">
       <div class="icon">🏏</div>
       <h3>Cricket</h3>
@@ -758,7 +711,6 @@ footer {
       <h3>Tabla</h3>
       <p>I enjoy music and learning through rhythm and practice.</p>
     </div>
-
   </div>
 </div>
 </section>
@@ -766,7 +718,6 @@ footer {
 <!-- RESUME -->
 <section id="resume">
 <div class="container">
-
   <div class="section-title">
     <h2>My Resume</h2>
     <div class="line"></div>
@@ -778,17 +729,14 @@ footer {
     <p>B.Voc Food & Agro Processing | Second Year</p>
     <p>Lokbharati University for Rural Innovation</p>
     <p>Internship experience in food processing, QC and dairy operations.</p>
-
     <button class="btn" onclick="window.print()">Print / Save Resume</button>
   </div>
-
 </div>
 </section>
 
 <!-- CONTACT -->
 <section class="alt-section" id="contact">
 <div class="container">
-
   <div class="section-title">
     <h2>Contact Me</h2>
     <div class="line"></div>
@@ -818,7 +766,6 @@ footer {
       I am always interested in learning, sharing ideas and connecting with new people.
     </p>
   </div>
-
 </div>
 </section>
 
